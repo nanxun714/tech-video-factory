@@ -1,0 +1,99 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "+4%",
+  "total_sec": 58.388,
+  "total_frames": 1752,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "电脑只有16G内存，凭什么能同时开着微信、浏览器和一大堆软件？",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 6.673,
+      "start_frame": 0,
+      "end_frame": 200
+    },
+    {
+      "index": 2,
+      "text": "秘密就是今天的面试高频题，虚拟内存。",
+      "audio": "s02.mp3",
+      "start_sec": 6.853,
+      "end_sec": 10.893,
+      "start_frame": 206,
+      "end_frame": 327
+    },
+    {
+      "index": 3,
+      "text": "虚拟内存，是操作系统给每个程序造出来的一套假地址。",
+      "audio": "s03.mp3",
+      "start_sec": 11.073,
+      "end_sec": 16.411,
+      "start_frame": 332,
+      "end_frame": 492
+    },
+    {
+      "index": 4,
+      "text": "让每个程序都以为自己，独占了一大片连续的内存。",
+      "audio": "s04.mp3",
+      "start_sec": 16.591,
+      "end_sec": 21.425,
+      "start_frame": 498,
+      "end_frame": 643
+    },
+    {
+      "index": 5,
+      "text": "程序里用的叫虚拟地址，操作系统通过页表，把它翻译成物理内存里的真实位置。",
+      "audio": "s05.mp3",
+      "start_sec": 21.605,
+      "end_sec": 28.915,
+      "start_frame": 648,
+      "end_frame": 867
+    },
+    {
+      "index": 6,
+      "text": "那物理内存不够用了怎么办？",
+      "audio": "s06.mp3",
+      "start_sec": 29.095,
+      "end_sec": 31.693,
+      "start_frame": 873,
+      "end_frame": 951
+    },
+    {
+      "index": 7,
+      "text": "操作系统会把不常用的数据，暂时搬到硬盘上，这个动作叫换页。",
+      "audio": "s07.mp3",
+      "start_sec": 31.873,
+      "end_sec": 38.029,
+      "start_frame": 956,
+      "end_frame": 1141
+    },
+    {
+      "index": 8,
+      "text": "等再用到的时候，再搬回来。所以在系统眼里，硬盘就是内存的备胎。",
+      "audio": "s08.mp3",
+      "start_sec": 38.209,
+      "end_sec": 45.156,
+      "start_frame": 1146,
+      "end_frame": 1355
+    },
+    {
+      "index": 9,
+      "text": "记住三个词，假地址，页表翻译，硬盘换页。面试答出这三个，这道题就稳了。",
+      "audio": "s09.mp3",
+      "start_sec": 45.336,
+      "end_sec": 53.052,
+      "start_frame": 1360,
+      "end_frame": 1592
+    },
+    {
+      "index": 10,
+      "text": "学会了吗？点个赞点个关注，下期讲进程和线程。",
+      "audio": "s10.mp3",
+      "start_sec": 53.232,
+      "end_sec": 58.388,
+      "start_frame": 1597,
+      "end_frame": 1752
+    }
+  ]
+}

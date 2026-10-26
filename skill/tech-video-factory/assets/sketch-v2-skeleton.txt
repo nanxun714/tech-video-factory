@@ -1,0 +1,94 @@
+# -*- coding: utf-8 -*-
+提示：本文件是给 AI 看的说明，不是可执行代码。
+# sketch v2 骨架（大白手绘体系 · 面试概念题模板）
+# 来源活样板：src/VirtualMemorySketch.tsx（虚拟内存，用户验收通过 2026-09-07）
+# 用法：新建 src/<Topic>Sketch.tsx，把下面代码整体复制，按 TODO 替换 讲稿/字幕/页面内容。
+# 音频先跑 gen_tts.py + gen_subs.py，把 timeline 的句子窗口填进 voiceLines / PAGES。
+
+================================================================================
+【1】常量与字体（复制后不用改）
+================================================================================
+import {Audio} from "@remotion/media";
+import {AbsoluteFill, interpolate, Sequence, staticFile, useCurrentFrame} from "remotion";
+
+const PAPER = "#fdfcf7";            // 微暖纸白
+const INK = "#3a3a3a";              // 手绘墨线
+const SUBC = "#8a8579";
+const RED = "#c94f4f";              // 波浪强调线
+const BLUE_F = "rgba(139,178,216,0.34)";
+const PINK_E = "#c96a7c";
+const GREEN_F = "rgba(140,200,150,0.34)";
+const GREEN_E = "#4e9464";
+const YEL_F = "rgba(242,202,92,0.45)";
+const ORANGE_F = "rgba(242,163,94,0.36)";
+const ORANGE_E = "#c97a2e";
+
+const T_FONT = "'STXingkai','华文行楷','KaiTi','楷体',serif";   // 标题=华文行楷
+const B_FONT = "'STKaiti','KaiTi','楷体','Microsoft YaHei',serif"; // 正文=楷体
+
+const clamp = {extrapolateLeft: "clamp", extrapolateRight: "clamp"} as const;
+const wob = (i: number, amp = 2.4) => Math.sin(i * 5.7 + 1.3) * amp;
+const prog = (f: number, delay: number, dur = 16) =>
+  interpolate(f, [delay, delay + dur], [0, 1], clamp);
+
+================================================================================
+【2】手绘原语（从活样板整段复制：Draw / WBox / WCol / blobPath / sketchRectPath /
+    Arrow / Squiggle / Bubble / Sticker / Stick / Bulb / Disk / MemBar / HandTitle / Hl）
+    全部是收 f（页内内容帧）的纯函数，禁止内部 useCurrentFrame（页面有 off 偏移）。
+    静态元素（0:00 封面）delay 传 -99，不是 -1 —— 插值要 dur 全程走完才到 1。
+
+================================================================================
+【3】页面系统（叠化转场）
+================================================================================
+const PAGES = [
+  {C: PageHook,  start: 0,    end: 330},   // 开场封面：第 0 帧完整静态，不描画
+  {C: PageX1,    start: 330,  end: ...},   // 每页一个概念，边界=配音句窗口
+  // ... 按句切页；单页内容帧 200~500（7~16s）；一页只干一件事（结尾 CTA 单独一页）
+];
+
+const PageTurn: React.FC<{children; off: number; len: number; first: boolean; last: boolean}> = ({
+  children, off, len, first, last,
+}) => {
+  const frame = useCurrentFrame();
+  const oIn = first ? 1 : interpolate(frame, [0, 10], [0, 1], clamp);
+  const lf = frame - off;
+  const oOut = last ? 1 : interpolate(lf, [len - 10, len], [1, 0], clamp);
+  return <AbsoluteFill style={{opacity: Math.min(oIn, oOut)}}>{children}</AbsoluteFill>;
+};
+
+// 主组件里：
+{PAGES.map(({C, start, end}, i) => {
+  const first = i === 0, last = i === PAGES.length - 1;
+  const len = end - start;
+  const off = first ? 0 : 10;
+  return (
+    <Sequence key={i} from={first ? 0 : start - 10} durationInFrames={len + 12}>
+      <PageTurn off={off} len={len} first={first} last={last}><C off={off} /></PageTurn>
+    </Sequence>
+  );
+})}
+// 页内取内容帧：const f = useCurrentFrame() - off;
+
+================================================================================
+【4】必带元素
+================================================================================
+- Subtitle：黄字黑描边（#ffd93d + 8 向 textShadow 4px #3a2f10，微软雅黑 900，52px，
+  底部居中），逐句显示；此样式仅 sketch 风用
+- CornerMark：右上角"小秋"两字（B_FONT 30px letterSpacing 6，rotate(2deg)，
+  红色底边线），无任何 emoji
+- 落款"小秋 · 0 基础也能学会"：开场页 + 结尾页各一次
+- Audio：voiceLines 逐句 Sequence；页切换点 transfer.wav vol 0.16；bed.wav loop 0.07 淡入淡出
+- 每个 Page 组件：const f = useCurrentFrame() - off; 出场元素按配音顺序 delay 递增
+  （先标题 → 定义 → 图 → 箭头 → 结论，15~25 帧一步）
+
+================================================================================
+【5】构图公式（每页照抄）
+================================================================================
+HandTitle（居中行楷 88~96px + 两侧 ⹅ 笔触 + 红波浪线）
+  → 定义横幅 / 楷体段落（可加 Hl 高亮词）
+  → 中央核心示意图（Watercolor + WBox + Arrow + 专属简笔：Disk/MemBar/自画）
+  → 周边放射标注（Bubble 气泡 + Sticker 虚线贴纸）
+  → 火柴人 Stick + 灯泡 Bulb 点缀
+  → 底部云朵结论（WCol + 大字）
+结尾两页固定：倒数第 2 页 = 三词卡总结（+ 面试贴纸 + Stick 稳了）；
+最后一页 = 点赞 CTA + "顺手点个关注" + 下期预告贴纸 + 落款。两页都留大量空白。

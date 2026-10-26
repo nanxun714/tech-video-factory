@@ -1,0 +1,99 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-YunxiNeural",
+  "rate": "+10%",
+  "total_sec": 54.24,
+  "total_frames": 1627,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "Python代码不是机器码，CPU又不认识Python，为什么还能运行？",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 7.2,
+      "start_frame": 0,
+      "end_frame": 216,
+      "dur_sec": 7.2
+    },
+    {
+      "index": 2,
+      "text": "因为它不是直接交给CPU，而是先经过Python解释器。",
+      "audio": "s02.mp3",
+      "start_sec": 7.36,
+      "end_sec": 12.96,
+      "start_frame": 221,
+      "end_frame": 389,
+      "dur_sec": 5.6
+    },
+    {
+      "index": 3,
+      "text": "源码先被处理，通常会编译成字节码，再交给Python运行时执行。",
+      "audio": "s03.mp3",
+      "start_sec": 13.12,
+      "end_sec": 19.52,
+      "start_frame": 394,
+      "end_frame": 586,
+      "dur_sec": 6.4
+    },
+    {
+      "index": 4,
+      "text": "所以Python不是完全没有编译，而是编译和执行方式不同。",
+      "audio": "s04.mp3",
+      "start_sec": 19.68,
+      "end_sec": 25.48,
+      "start_frame": 590,
+      "end_frame": 764,
+      "dur_sec": 5.8
+    },
+    {
+      "index": 5,
+      "text": "比如这句 print Hello，会先变成一组字节码指令。",
+      "audio": "s05.mp3",
+      "start_sec": 25.64,
+      "end_sec": 31.44,
+      "start_frame": 769,
+      "end_frame": 943,
+      "dur_sec": 5.8
+    },
+    {
+      "index": 6,
+      "text": "运行时一条条取出指令，管理对象、变量和调用。",
+      "audio": "s06.mp3",
+      "start_sec": 31.6,
+      "end_sec": 36.0,
+      "start_frame": 948,
+      "end_frame": 1080,
+      "dur_sec": 4.4
+    },
+    {
+      "index": 7,
+      "text": "C语言通常先编译成机器码，再交给CPU；Python则由解释器和运行时参与执行。",
+      "audio": "s07.mp3",
+      "start_sec": 36.16,
+      "end_sec": 44.16,
+      "start_frame": 1085,
+      "end_frame": 1325,
+      "dur_sec": 8.0
+    },
+    {
+      "index": 8,
+      "text": "CPU不认识Python，它执行的是运行环境里的机器指令。",
+      "audio": "s08.mp3",
+      "start_sec": 44.32,
+      "end_sec": 50.12,
+      "start_frame": 1330,
+      "end_frame": 1504,
+      "dur_sec": 5.8
+    },
+    {
+      "index": 9,
+      "text": "下一期，程序运行时内存到底发生了什么？",
+      "audio": "s09.mp3",
+      "start_sec": 50.28,
+      "end_sec": 54.08,
+      "start_frame": 1508,
+      "end_frame": 1622,
+      "dur_sec": 3.8
+    }
+  ]
+}

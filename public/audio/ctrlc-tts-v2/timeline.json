@@ -1,0 +1,99 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-YunxiNeural",
+  "rate": "+18%",
+  "total_sec": 49.294,
+  "total_frames": 1479,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "复制的东西去哪了？按下Ctrl+C，它真的被复制走了吗？",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 4.894,
+      "start_frame": 0,
+      "end_frame": 147
+    },
+    {
+      "index": 2,
+      "text": "其实，原文件根本没被拿走。",
+      "audio": "s02.mp3",
+      "start_sec": 5.074,
+      "end_sec": 8.016,
+      "start_frame": 152,
+      "end_frame": 240
+    },
+    {
+      "index": 3,
+      "text": "按下Ctrl+C，系统会把内容复制一份，放进一个叫剪贴板的地方。",
+      "audio": "s03.mp3",
+      "start_sec": 8.196,
+      "end_sec": 13.426,
+      "start_frame": 246,
+      "end_frame": 403
+    },
+    {
+      "index": 4,
+      "text": "你可以把剪贴板理解成，内存里的一块黑板。",
+      "audio": "s04.mp3",
+      "start_sec": 13.606,
+      "end_sec": 17.237,
+      "start_frame": 408,
+      "end_frame": 517
+    },
+    {
+      "index": 5,
+      "text": "粘贴Ctrl+V，就是把黑板上的内容，再抄到你要的位置。",
+      "audio": "s05.mp3",
+      "start_sec": 17.417,
+      "end_sec": 22.001,
+      "start_frame": 523,
+      "end_frame": 660
+    },
+    {
+      "index": 6,
+      "text": "那Ctrl+X呢？它也会把内容放进黑板，但原来的内容会被移走。",
+      "audio": "s06.mp3",
+      "start_sec": 22.181,
+      "end_sec": 27.944,
+      "start_frame": 665,
+      "end_frame": 838
+    },
+    {
+      "index": 7,
+      "text": "不过，黑板通常只有一块。你复制新的内容，旧的就被覆盖了。",
+      "audio": "s07.mp3",
+      "start_sec": 28.124,
+      "end_sec": 33.918,
+      "start_frame": 844,
+      "end_frame": 1018
+    },
+    {
+      "index": 8,
+      "text": "那为什么电脑一重启，剪贴板里的东西也没了？",
+      "audio": "s08.mp3",
+      "start_sec": 34.098,
+      "end_sec": 37.729,
+      "start_frame": 1023,
+      "end_frame": 1132
+    },
+    {
+      "index": 9,
+      "text": "因为剪贴板的数据主要存在内存里，而内存断电后，内容就会消失。",
+      "audio": "s09.mp3",
+      "start_sec": 37.909,
+      "end_sec": 43.542,
+      "start_frame": 1137,
+      "end_frame": 1306
+    },
+    {
+      "index": 10,
+      "text": "复制不是拿走，是抄上黑板。黑板在内存里，重启就擦干净。",
+      "audio": "s10.mp3",
+      "start_sec": 43.722,
+      "end_sec": 49.294,
+      "start_frame": 1312,
+      "end_frame": 1479
+    }
+  ]
+}

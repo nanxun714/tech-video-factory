@@ -1,0 +1,98 @@
+{
+  "fps": 30,
+  "rate": "+28%",
+  "total_sec": 45.289,
+  "total_frames": 1359,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "连咖啡店的 WiFi 输密码？等于把密码写在明信片上寄出去。",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 4.629,
+      "start_frame": 0,
+      "end_frame": 139,
+      "dur_sec": 4.629
+    },
+    {
+      "index": 2,
+      "text": "HTTP 就是这张明信片，路上经手的每个人，都看得到内容。",
+      "audio": "s02.mp3",
+      "start_sec": 4.809,
+      "end_sec": 9.664,
+      "start_frame": 144,
+      "end_frame": 290,
+      "dur_sec": 4.855
+    },
+    {
+      "index": 3,
+      "text": "HTTPS，就是把它装进密封信封，再上一把锁。",
+      "audio": "s03.mp3",
+      "start_sec": 9.844,
+      "end_sec": 14.005,
+      "start_frame": 295,
+      "end_frame": 420,
+      "dur_sec": 4.161
+    },
+    {
+      "index": 4,
+      "text": "只有收件人有钥匙，中间的路由器、运营商，全都看不到。",
+      "audio": "s04.mp3",
+      "start_sec": 14.185,
+      "end_sec": 18.62,
+      "start_frame": 426,
+      "end_frame": 559,
+      "dur_sec": 4.435
+    },
+    {
+      "index": 5,
+      "text": "怎么做到的？HTTPS 比 HTTP 多了一层加密。",
+      "audio": "s05.mp3",
+      "start_sec": 18.8,
+      "end_sec": 23.165,
+      "start_frame": 564,
+      "end_frame": 695,
+      "dur_sec": 4.365
+    },
+    {
+      "index": 6,
+      "text": "浏览器和服务器先商量好一把钥匙，数据锁起来，到了对面才解锁。",
+      "audio": "s06.mp3",
+      "start_sec": 23.345,
+      "end_sec": 28.483,
+      "start_frame": 700,
+      "end_frame": 854,
+      "dur_sec": 5.138
+    },
+    {
+      "index": 7,
+      "text": "所以网址前面那把小锁，不是装饰，是你的密码正在被保护。",
+      "audio": "s07.mp3",
+      "start_sec": 28.663,
+      "end_sec": 33.439,
+      "start_frame": 860,
+      "end_frame": 1003,
+      "dur_sec": 4.777
+    },
+    {
+      "index": 8,
+      "text": "对了，自己上线网站记得配一张 HTTPS 证书，免费的就行。",
+      "audio": "s08.mp3",
+      "start_sec": 33.619,
+      "end_sec": 38.669,
+      "start_frame": 1009,
+      "end_frame": 1160,
+      "dur_sec": 5.05
+    },
+    {
+      "index": 9,
+      "text": "面试问 HTTP 和 HTTPS 的区别？讲明信片和信封，比背定义强一百倍。",
+      "audio": "s09.mp3",
+      "start_sec": 38.849,
+      "end_sec": 45.109,
+      "start_frame": 1165,
+      "end_frame": 1353,
+      "dur_sec": 6.26
+    }
+  ]
+}

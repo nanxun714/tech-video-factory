@@ -1,0 +1,117 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "+4%",
+  "total_sec": 72.72,
+  "total_frames": 2182,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "你删掉的那个文件，其实还躺在硬盘里。",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 3.7,
+      "start_frame": 0,
+      "end_frame": 111
+    },
+    {
+      "index": 2,
+      "text": "只是你和电脑，都假装它不见了。",
+      "audio": "s02.mp3",
+      "start_sec": 3.88,
+      "end_sec": 7.12,
+      "start_frame": 116,
+      "end_frame": 214
+    },
+    {
+      "index": 3,
+      "text": "这件事有两面：误删的文件，有机会救回来；但卖电脑前只做普通删除，你的照片可能被别人恢复。",
+      "audio": "s03.mp3",
+      "start_sec": 7.3,
+      "end_sec": 16.52,
+      "start_frame": 219,
+      "end_frame": 496
+    },
+    {
+      "index": 4,
+      "text": "硬盘就像一个大仓库，每个文件，都是仓库里的一件货物。",
+      "audio": "s04.mp3",
+      "start_sec": 16.7,
+      "end_sec": 22.05,
+      "start_frame": 501,
+      "end_frame": 662
+    },
+    {
+      "index": 5,
+      "text": "而目录，就是仓库门口的登记本，写着每件货物放在哪个货架。",
+      "audio": "s05.mp3",
+      "start_sec": 22.23,
+      "end_sec": 28.23,
+      "start_frame": 667,
+      "end_frame": 847
+    },
+    {
+      "index": 6,
+      "text": "你按下删除键的时候，电脑只干了一件事：在登记本上，把这件货的名字划掉。",
+      "audio": "s06.mp3",
+      "start_sec": 28.41,
+      "end_sec": 35.51,
+      "start_frame": 852,
+      "end_frame": 1065
+    },
+    {
+      "index": 7,
+      "text": "货物一毫米都没挪，只是这块货架，被标记成了可以放新货。",
+      "audio": "s07.mp3",
+      "start_sec": 35.69,
+      "end_sec": 41.37,
+      "start_frame": 1071,
+      "end_frame": 1241
+    },
+    {
+      "index": 8,
+      "text": "恢复软件干的事，就是跳过登记本，直接去货架上翻，找出还没被新货盖住的旧货。",
+      "audio": "s08.mp3",
+      "start_sec": 41.55,
+      "end_sec": 49.28,
+      "start_frame": 1246,
+      "end_frame": 1478
+    },
+    {
+      "index": 9,
+      "text": "那什么时候才是真没了？这块位置被新文件覆盖之后。",
+      "audio": "s09.mp3",
+      "start_sec": 49.46,
+      "end_sec": 54.81,
+      "start_frame": 1484,
+      "end_frame": 1644
+    },
+    {
+      "index": 10,
+      "text": "所以误删文件，第一件事是别再往这个盘里存东西，越早恢复，成功率越高。",
+      "audio": "s10.mp3",
+      "start_sec": 54.99,
+      "end_sec": 62.21,
+      "start_frame": 1650,
+      "end_frame": 1866
+    },
+    {
+      "index": 11,
+      "text": "记住这句话：删除删的是目录，不是数据。",
+      "audio": "s11.mp3",
+      "start_sec": 62.39,
+      "end_sec": 66.49,
+      "start_frame": 1872,
+      "end_frame": 1995
+    },
+    {
+      "index": 12,
+      "text": "学会了点个赞点个关注，更多数据保存的坑，我都放在主页合集里了。",
+      "audio": "s12.mp3",
+      "start_sec": 66.67,
+      "end_sec": 72.72,
+      "start_frame": 2000,
+      "end_frame": 2182
+    }
+  ]
+}

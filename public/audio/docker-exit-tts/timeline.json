@@ -1,0 +1,72 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "+4%",
+  "total_sec": 45.536,
+  "total_frames": 1366,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "Docker 容器一起就秒退？别急着删掉重装，三步定位问题。",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 5.865,
+      "start_frame": 0,
+      "end_frame": 176
+    },
+    {
+      "index": 2,
+      "text": "第一步，docker ps -a，看退出码。Exited 1 是程序自己报错，Exited 137 是内存不够被杀。",
+      "audio": "s02.mp3",
+      "start_sec": 6.045,
+      "end_sec": 16.045,
+      "start_frame": 181,
+      "end_frame": 481
+    },
+    {
+      "index": 3,
+      "text": "第二步，docker logs 容器名，看最后几行日志，九成的问题答案都在这里。",
+      "audio": "s03.mp3",
+      "start_sec": 16.225,
+      "end_sec": 22.801,
+      "start_frame": 487,
+      "end_frame": 684
+    },
+    {
+      "index": 4,
+      "text": "第三步，去掉横杠 d 前台跑一遍，后台藏着的报错直接打在脸上。",
+      "audio": "s04.mp3",
+      "start_sec": 22.981,
+      "end_sec": 29.221,
+      "start_frame": 689,
+      "end_frame": 877
+    },
+    {
+      "index": 5,
+      "text": "新手最爱一出问题就 rm 重装，但那是在删证据。",
+      "audio": "s05.mp3",
+      "start_sec": 29.401,
+      "end_sec": 34.355,
+      "start_frame": 882,
+      "end_frame": 1031
+    },
+    {
+      "index": 6,
+      "text": "ps 看状态，logs 看原因，前台跑验证，三步下来问题藏不住。",
+      "audio": "s06.mp3",
+      "start_sec": 34.535,
+      "end_sec": 40.931,
+      "start_frame": 1036,
+      "end_frame": 1228
+    },
+    {
+      "index": 7,
+      "text": "学会了就点个赞，下期教你进容器内部排查。",
+      "audio": "s07.mp3",
+      "start_sec": 41.111,
+      "end_sec": 45.536,
+      "start_frame": 1233,
+      "end_frame": 1366
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "+4%",
+  "total_sec": 63.02,
+  "total_frames": 1891,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "你看视频的时候，数据到底是怎么传过来的？",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 4.0,
+      "start_frame": 0,
+      "end_frame": 120,
+      "dur_sec": 4.0
+    },
+    {
+      "index": 2,
+      "text": "背后离不开两个协议，TCP和UDP。一个更追求可靠，一个更追求速度。",
+      "audio": "s02.mp3",
+      "start_sec": 4.18,
+      "end_sec": 10.98,
+      "start_frame": 125,
+      "end_frame": 329,
+      "dur_sec": 6.8
+    },
+    {
+      "index": 3,
+      "text": "TCP像打电话，先问一句听到了吗，听到了才继续说。",
+      "audio": "s03.mp3",
+      "start_sec": 11.16,
+      "end_sec": 16.16,
+      "start_frame": 335,
+      "end_frame": 485,
+      "dur_sec": 5.0
+    },
+    {
+      "index": 4,
+      "text": "UDP像拿大喇叭喊话，喊完就走，不管你听没听到。",
+      "audio": "s04.mp3",
+      "start_sec": 16.34,
+      "end_sec": 21.14,
+      "start_frame": 490,
+      "end_frame": 634,
+      "dur_sec": 4.8
+    },
+    {
+      "index": 5,
+      "text": "TCP发每个包，都编号签收。发现第三个没到，就问一句，然后重新发，确认收到才继续。",
+      "audio": "s05.mp3",
+      "start_sec": 21.32,
+      "end_sec": 29.52,
+      "start_frame": 640,
+      "end_frame": 886,
+      "dur_sec": 8.2
+    },
+    {
+      "index": 6,
+      "text": "UDP呢，五个包连续发，中间丢了也不等、不确认、不重传。它不提供TCP那样的可靠机制，但换来了低延迟。",
+      "audio": "s06.mp3",
+      "start_sec": 29.7,
+      "end_sec": 39.9,
+      "start_frame": 891,
+      "end_frame": 1197,
+      "dur_sec": 10.2
+    },
+    {
+      "index": 7,
+      "text": "所以网页、文件、登录，走TCP；直播、游戏、DNS，走UDP。",
+      "audio": "s07.mp3",
+      "start_sec": 40.08,
+      "end_sec": 46.28,
+      "start_frame": 1202,
+      "end_frame": 1388,
+      "dur_sec": 6.2
+    },
+    {
+      "index": 8,
+      "text": "TCP更强调可靠性，UDP更强调低延迟和效率。不是谁更好，而是看你的场景需要什么。",
+      "audio": "s08.mp3",
+      "start_sec": 46.46,
+      "end_sec": 54.66,
+      "start_frame": 1394,
+      "end_frame": 1640,
+      "dur_sec": 8.2
+    },
+    {
+      "index": 9,
+      "text": "下一期，浏览器输入网址后，到底发生了什么？关注全栈小秋，继续把计算机基础讲明白。",
+      "audio": "s09.mp3",
+      "start_sec": 54.84,
+      "end_sec": 62.84,
+      "start_frame": 1645,
+      "end_frame": 1885,
+      "dur_sec": 8.0
+    }
+  ]
+}

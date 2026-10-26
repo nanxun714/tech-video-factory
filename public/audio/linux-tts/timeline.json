@@ -1,0 +1,90 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "+4%",
+  "total_sec": 65.45,
+  "total_frames": 1964,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "第一次打开 Linux 终端，满屏都是黑的，不知道该敲什么？",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 5.615,
+      "start_frame": 0,
+      "end_frame": 168
+    },
+    {
+      "index": 2,
+      "text": "记住第一个命令：pwd。它打印你当前所在的目录，敲下回车，系统立刻告诉你位置。",
+      "audio": "s02.mp3",
+      "start_sec": 5.795,
+      "end_sec": 14.136,
+      "start_frame": 174,
+      "end_frame": 424
+    },
+    {
+      "index": 3,
+      "text": "第二个命令：ls。它列出当前目录下的所有文件，想知道这里有什么，敲 ls 就够了。",
+      "audio": "s03.mp3",
+      "start_sec": 14.316,
+      "end_sec": 22.525,
+      "start_frame": 429,
+      "end_frame": 676
+    },
+    {
+      "index": 4,
+      "text": "第三个命令：cd。cd 空格加路径，就能跳进目标目录；cd 加两个点，退回上一级。",
+      "audio": "s04.mp3",
+      "start_sec": 22.705,
+      "end_sec": 31.419,
+      "start_frame": 681,
+      "end_frame": 943
+    },
+    {
+      "index": 5,
+      "text": "新手最容易错两个地方：命令和路径之间必须有空格；Linux 严格区分大小写，敲错它不认。",
+      "audio": "s05.mp3",
+      "start_sec": 31.599,
+      "end_sec": 40.483,
+      "start_frame": 948,
+      "end_frame": 1214
+    },
+    {
+      "index": 6,
+      "text": "总结一下：pwd 看位置，ls 看内容，cd 换目录。三个命令组合起来，你就能在 Linux 里自由行走。",
+      "audio": "s06.mp3",
+      "start_sec": 40.663,
+      "end_sec": 50.687,
+      "start_frame": 1220,
+      "end_frame": 1521
+    },
+    {
+      "index": 7,
+      "text": "来一道练习题：cd 后面跟两个点，表示什么意思？",
+      "audio": "s07.mp3",
+      "start_sec": 50.867,
+      "end_sec": 55.665,
+      "start_frame": 1526,
+      "end_frame": 1670
+    },
+    {
+      "index": 8,
+      "text": "答案是 A，回到上一级目录。你答对了没？",
+      "audio": "s08.mp3",
+      "start_sec": 55.845,
+      "end_sec": 60.16,
+      "start_frame": 1675,
+      "end_frame": 1805
+    },
+    {
+      "index": 9,
+      "text": "学会了就点个赞，下期我们讲更多常用命令，下期见！",
+      "audio": "s09.mp3",
+      "start_sec": 60.34,
+      "end_sec": 65.45,
+      "start_frame": 1810,
+      "end_frame": 1964
+    }
+  ]
+}

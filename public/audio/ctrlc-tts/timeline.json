@@ -1,0 +1,109 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-YunjianNeural",
+  "rate": "+15%",
+  "total_sec": 64.188,
+  "total_frames": 1926,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "你每天按几十次的Ctrl+C，复制走的东西，真的被拿走了吗",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 5.16,
+      "start_frame": 0,
+      "end_frame": 155
+    },
+    {
+      "index": 2,
+      "text": "其实并没有，原件从头到尾都躺在原地",
+      "audio": "s02.mp3",
+      "start_sec": 5.34,
+      "end_sec": 9.204,
+      "start_frame": 160,
+      "end_frame": 276
+    },
+    {
+      "index": 3,
+      "text": "按下Ctrl+C的瞬间，系统把内容抄了一份，放进一块公共地盘，它叫剪贴板",
+      "audio": "s03.mp3",
+      "start_sec": 9.384,
+      "end_sec": 16.056,
+      "start_frame": 282,
+      "end_frame": 482
+    },
+    {
+      "index": 4,
+      "text": "剪贴板，就是系统在内存里开的一块黑板",
+      "audio": "s04.mp3",
+      "start_sec": 16.236,
+      "end_sec": 20.268,
+      "start_frame": 487,
+      "end_frame": 608
+    },
+    {
+      "index": 5,
+      "text": "粘贴Ctrl+V，是从黑板上把内容抄到新位置，黑板上的还在，所以你能连着粘贴十次",
+      "audio": "s05.mp3",
+      "start_sec": 20.448,
+      "end_sec": 27.672,
+      "start_frame": 613,
+      "end_frame": 830
+    },
+    {
+      "index": 6,
+      "text": "剪切Ctrl+X，也是先抄上黑板，但它会给原件贴一张待删除的便签",
+      "audio": "s06.mp3",
+      "start_sec": 27.852,
+      "end_sec": 33.684,
+      "start_frame": 836,
+      "end_frame": 1011
+    },
+    {
+      "index": 7,
+      "text": "等你粘贴的那一刻，原件才被真正擦掉，这就是复制和剪切的全部区别",
+      "audio": "s07.mp3",
+      "start_sec": 33.864,
+      "end_sec": 39.912,
+      "start_frame": 1016,
+      "end_frame": 1197
+    },
+    {
+      "index": 8,
+      "text": "那为什么复制了新的，旧的就没有了？黑板只有一块，新的总会盖掉旧的",
+      "audio": "s08.mp3",
+      "start_sec": 40.092,
+      "end_sec": 46.788,
+      "start_frame": 1203,
+      "end_frame": 1404
+    },
+    {
+      "index": 9,
+      "text": "为什么重启之后，剪贴板就空了？因为黑板住在内存里，断电就自动擦干净",
+      "audio": "s09.mp3",
+      "start_sec": 46.968,
+      "end_sec": 53.976,
+      "start_frame": 1409,
+      "end_frame": 1619
+    },
+    {
+      "index": 10,
+      "text": "记住这句口诀，复制不是拿走，是抄上黑板，黑板在内存里，重启就擦干净",
+      "audio": "s10.mp3",
+      "start_sec": 54.156,
+      "end_sec": 60.684,
+      "start_frame": 1625,
+      "end_frame": 1821
+    },
+    {
+      "index": 11,
+      "text": "本期内容就到这里，我们下期见",
+      "audio": "s11.mp3",
+      "start_sec": 60.864,
+      "end_sec": 64.008,
+      "start_frame": 1826,
+      "end_frame": 1920
+    }
+  ],
+  "gap_sec": 0.18
+}

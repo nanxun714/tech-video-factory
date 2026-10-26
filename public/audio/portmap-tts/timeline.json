@@ -1,0 +1,81 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "+4%",
+  "total_sec": 61.555,
+  "total_frames": 1847,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "外网访问不了家里的设备？端口映射和内网穿透，一次给你讲清楚。",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 6.262,
+      "start_frame": 0,
+      "end_frame": 188
+    },
+    {
+      "index": 2,
+      "text": "先说端口映射。它就是把公网IP上的一个端口，和内网设备的端口绑定起来。",
+      "audio": "s02.mp3",
+      "start_sec": 6.442,
+      "end_sec": 13.678,
+      "start_frame": 193,
+      "end_frame": 410
+    },
+    {
+      "index": 3,
+      "text": "外部访问这个端口，路由器就像公司前台，查一下转接表，把流量转给内网那台机器。",
+      "audio": "s03.mp3",
+      "start_sec": 13.858,
+      "end_sec": 21.721,
+      "start_frame": 416,
+      "end_frame": 652
+    },
+    {
+      "index": 4,
+      "text": "但它有个硬性前提，你必须有真正的公网IP。现在运营商大多给的是大内网，配了也白配。",
+      "audio": "s04.mp3",
+      "start_sec": 21.901,
+      "end_sec": 30.206,
+      "start_frame": 657,
+      "end_frame": 906
+    },
+    {
+      "index": 5,
+      "text": "没有公网IP怎么办？用内网穿透。让设备主动连上一台公网服务器，打一条加密隧道。",
+      "audio": "s05.mp3",
+      "start_sec": 30.386,
+      "end_sec": 39.052,
+      "start_frame": 912,
+      "end_frame": 1172
+    },
+    {
+      "index": 6,
+      "text": "两者的区别一句话：端口映射是直接把门打开，内网穿透是找中间人帮你传话。",
+      "audio": "s06.mp3",
+      "start_sec": 39.232,
+      "end_sec": 46.878,
+      "start_frame": 1177,
+      "end_frame": 1406
+    },
+    {
+      "index": 7,
+      "text": "怎么选？有公网IP就用端口映射，速度快延迟低；没有就用穿透，零配置更省事。",
+      "audio": "s07.mp3",
+      "start_sec": 47.058,
+      "end_sec": 55.303,
+      "start_frame": 1412,
+      "end_frame": 1659
+    },
+    {
+      "index": 8,
+      "text": "学会了就点个赞，下期手把手教你用frp，搭一条自己的隧道。",
+      "audio": "s08.mp3",
+      "start_sec": 55.483,
+      "end_sec": 61.555,
+      "start_frame": 1664,
+      "end_frame": 1847
+    }
+  ]
+}

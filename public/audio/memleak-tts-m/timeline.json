@@ -1,0 +1,108 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-YunxiNeural",
+  "rate": "+18%",
+  "total_sec": 53.7,
+  "total_frames": 1611,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "这台服务器没人在操作，内存却每天都在悄悄变少",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 4.704,
+      "start_frame": 0,
+      "end_frame": 141
+    },
+    {
+      "index": 2,
+      "text": "表面上还能跑，直到某天深夜，它突然卡死，服务全挂",
+      "audio": "s02.mp3",
+      "start_sec": 4.884,
+      "end_sec": 9.948,
+      "start_frame": 147,
+      "end_frame": 298
+    },
+    {
+      "index": 3,
+      "text": "很多人的第一反应是重启，重启能撑几天，然后又慢了回去",
+      "audio": "s03.mp3",
+      "start_sec": 10.128,
+      "end_sec": 14.712,
+      "start_frame": 304,
+      "end_frame": 441
+    },
+    {
+      "index": 4,
+      "text": "其实这不是玄学，是典型的内存泄漏",
+      "audio": "s04.mp3",
+      "start_sec": 14.892,
+      "end_sec": 18.204,
+      "start_frame": 447,
+      "end_frame": 546
+    },
+    {
+      "index": 5,
+      "text": "程序申请了一块堆内存，用完却忘了还",
+      "audio": "s05.mp3",
+      "start_sec": 18.384,
+      "end_sec": 22.056,
+      "start_frame": 552,
+      "end_frame": 662
+    },
+    {
+      "index": 6,
+      "text": "一两个忘还不致命，可怕的是它每分钟都在申请，越积越多",
+      "audio": "s06.mp3",
+      "start_sec": 22.236,
+      "end_sec": 27.42,
+      "start_frame": 667,
+      "end_frame": 823
+    },
+    {
+      "index": 7,
+      "text": "第一步，用free命令看总量，已用一路涨，可用一路掉",
+      "audio": "s07.mp3",
+      "start_sec": 27.6,
+      "end_sec": 32.4,
+      "start_frame": 828,
+      "end_frame": 972
+    },
+    {
+      "index": 8,
+      "text": "第二步，用top按内存排序，真凶就排在第一行",
+      "audio": "s08.mp3",
+      "start_sec": 32.58,
+      "end_sec": 37.092,
+      "start_frame": 977,
+      "end_frame": 1113
+    },
+    {
+      "index": 9,
+      "text": "确认它该不该吃这么多，再决定杀掉它，还是修代码",
+      "audio": "s09.mp3",
+      "start_sec": 37.272,
+      "end_sec": 41.832,
+      "start_frame": 1118,
+      "end_frame": 1255
+    },
+    {
+      "index": 10,
+      "text": "记住这句口诀，内存只涨不降，先查进程，再查代码",
+      "audio": "s10.mp3",
+      "start_sec": 42.012,
+      "end_sec": 47.076,
+      "start_frame": 1260,
+      "end_frame": 1412
+    },
+    {
+      "index": 11,
+      "text": "下一集讲怎么让进程把内存吐出来，排错系列都在主页合集里，建议收藏",
+      "audio": "s11.mp3",
+      "start_sec": 47.256,
+      "end_sec": 53.52,
+      "start_frame": 1418,
+      "end_frame": 1606
+    }
+  ]
+}

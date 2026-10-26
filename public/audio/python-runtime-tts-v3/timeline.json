@@ -1,0 +1,89 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-YunxiNeural",
+  "rate": "+18%",
+  "total_sec": 38.84,
+  "total_frames": 1165,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "Python代码不是机器码，CPU不认识它，为什么还能运行？",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 4.512,
+      "start_frame": 0,
+      "end_frame": 135,
+      "dur_sec": 4.512
+    },
+    {
+      "index": 2,
+      "text": "因为源码先交给Python解释器，通常会被编译成字节码。",
+      "audio": "s02.mp3",
+      "start_sec": 4.672,
+      "end_sec": 8.92,
+      "start_frame": 140,
+      "end_frame": 268,
+      "dur_sec": 4.248
+    },
+    {
+      "index": 3,
+      "text": "再由Python运行时取出指令，管理对象、变量和调用。",
+      "audio": "s03.mp3",
+      "start_sec": 9.08,
+      "end_sec": 13.784,
+      "start_frame": 272,
+      "end_frame": 414,
+      "dur_sec": 4.704
+    },
+    {
+      "index": 4,
+      "text": "所以Python不是不编译，而是编译和执行方式不同。",
+      "audio": "s04.mp3",
+      "start_sec": 13.944,
+      "end_sec": 18.72,
+      "start_frame": 418,
+      "end_frame": 562,
+      "dur_sec": 4.776
+    },
+    {
+      "index": 5,
+      "text": "比如print Hello，会变成类似这样的字节码指令。",
+      "audio": "s05.mp3",
+      "start_sec": 18.88,
+      "end_sec": 22.912,
+      "start_frame": 566,
+      "end_frame": 687,
+      "dur_sec": 4.032
+    },
+    {
+      "index": 6,
+      "text": "C通常先生成机器码；Python则多了字节码、解释器和运行时。",
+      "audio": "s06.mp3",
+      "start_sec": 23.072,
+      "end_sec": 28.352,
+      "start_frame": 692,
+      "end_frame": 851,
+      "dur_sec": 5.28
+    },
+    {
+      "index": 7,
+      "text": "CPU不认识Python，它执行的是运行环境里的机器指令。",
+      "audio": "s07.mp3",
+      "start_sec": 28.512,
+      "end_sec": 33.288,
+      "start_frame": 855,
+      "end_frame": 999,
+      "dur_sec": 4.776
+    },
+    {
+      "index": 8,
+      "text": "学会了就点赞关注，转发收藏；还想听什么，评论区告诉我。",
+      "audio": "s08.mp3",
+      "start_sec": 33.448,
+      "end_sec": 38.68,
+      "start_frame": 1003,
+      "end_frame": 1160,
+      "dur_sec": 5.232
+    }
+  ]
+}

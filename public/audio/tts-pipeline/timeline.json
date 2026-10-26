@@ -1,0 +1,77 @@
+{
+  "fps": 30,
+  "total_sec": 45.138,
+  "total_frames": 1354,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "Hadoop 里一台服务器突然挂了，你的数据会跟着消失吗？",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 5.458,
+      "start_frame": 0,
+      "end_frame": 164,
+      "dur_sec": 5.458
+    },
+    {
+      "index": 2,
+      "text": "答案是不会。HDFS 从来不会只存一份。",
+      "audio": "s02.mp3",
+      "start_sec": 5.638,
+      "end_sec": 11.059,
+      "start_frame": 169,
+      "end_frame": 332,
+      "dur_sec": 5.421
+    },
+    {
+      "index": 3,
+      "text": "你上传的大文件，会被 HDFS 切成一个个 128MB 的 Block。",
+      "audio": "s03.mp3",
+      "start_sec": 11.239,
+      "end_sec": 18.123,
+      "start_frame": 337,
+      "end_frame": 544,
+      "dur_sec": 6.884
+    },
+    {
+      "index": 4,
+      "text": "HDFS 默认保存三份副本，分散到不同节点，一台出故障，其它副本顶上来。",
+      "audio": "s04.mp3",
+      "start_sec": 18.303,
+      "end_sec": 26.981,
+      "start_frame": 549,
+      "end_frame": 809,
+      "dur_sec": 8.678
+    },
+    {
+      "index": 5,
+      "text": "当一台 DataNode 掉线，NameNode 发现心跳断了，立刻去找其它副本。",
+      "audio": "s05.mp3",
+      "start_sec": 27.161,
+      "end_sec": 33.868,
+      "start_frame": 815,
+      "end_frame": 1016,
+      "dur_sec": 6.708
+    },
+    {
+      "index": 6,
+      "text": "数据照常能读，集群照常能跑。",
+      "audio": "s06.mp3",
+      "start_sec": 34.048,
+      "end_sec": 37.862,
+      "start_frame": 1021,
+      "end_frame": 1136,
+      "dur_sec": 3.814
+    },
+    {
+      "index": 7,
+      "text": "三副本，就是 HDFS 容错的底气。挂一台，不丢一分。",
+      "audio": "s07.mp3",
+      "start_sec": 38.042,
+      "end_sec": 44.958,
+      "start_frame": 1141,
+      "end_frame": 1349,
+      "dur_sec": 6.916
+    }
+  ]
+}

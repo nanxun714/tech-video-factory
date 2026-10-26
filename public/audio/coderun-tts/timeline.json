@@ -1,0 +1,95 @@
+{
+  "fps": 30,
+  "total_sec": 63.038,
+  "total_frames": 1891,
+  "sentences": [
+    {
+      "audio": "s01.mp3",
+      "dur_sec": 4.6912035,
+      "wb_count": 1,
+      "text": "你写的代码，是怎么变成电脑上跑起来的程序的？",
+      "index": 1,
+      "start_sec": 0.0,
+      "end_sec": 4.691,
+      "start_frame": 0,
+      "end_frame": 141
+    },
+    {
+      "audio": "s02.mp3",
+      "dur_sec": 8.7537033,
+      "wb_count": 1,
+      "text": "无论是 Python、Java 还是 C++，本质上都是一份文本文件；但 CPU 只认识 0 和 1 组成的机器语言。",
+      "index": 2,
+      "start_sec": 4.891,
+      "end_sec": 13.645,
+      "start_frame": 147,
+      "end_frame": 409
+    },
+    {
+      "audio": "s03.mp3",
+      "dur_sec": 6.2537034,
+      "wb_count": 1,
+      "text": "所以第一步，要靠编译器或解释器，把代码翻译成 CPU 能懂的机器指令。",
+      "index": 3,
+      "start_sec": 13.845,
+      "end_sec": 20.099,
+      "start_frame": 415,
+      "end_frame": 603
+    },
+    {
+      "audio": "s04.mp3",
+      "dur_sec": 7.0754626,
+      "wb_count": 1,
+      "text": "以 C 语言为例，从编译到运行，主要分四步：预编译、编译、链接、运行。",
+      "index": 4,
+      "start_sec": 20.299,
+      "end_sec": 27.374,
+      "start_frame": 609,
+      "end_frame": 821
+    },
+    {
+      "audio": "s05.mp3",
+      "dur_sec": 7.8277774,
+      "wb_count": 1,
+      "text": "预编译先干三件事：把头文件展开，把宏做纯文本替换，再删掉条件不满足的代码。",
+      "index": 5,
+      "start_sec": 27.574,
+      "end_sec": 35.402,
+      "start_frame": 827,
+      "end_frame": 1062
+    },
+    {
+      "audio": "s06.mp3",
+      "dur_sec": 10.9759254,
+      "wb_count": 1,
+      "text": "然后是语法检查，少分号、类型不匹配都会被拦下；通过后生成目标文件，链接器再把代码和系统库拼接起来，变成可执行程序。",
+      "index": 6,
+      "start_sec": 35.602,
+      "end_sec": 46.578,
+      "start_frame": 1068,
+      "end_frame": 1397
+    },
+    {
+      "audio": "s07.mp3",
+      "dur_sec": 8.707407,
+      "wb_count": 1,
+      "text": "双击运行时，操作系统把它加载进内存、分配好资源，再把 CPU 交给程序入口，指令一条条执行。",
+      "index": 7,
+      "start_sec": 46.778,
+      "end_sec": 55.485,
+      "start_frame": 1403,
+      "end_frame": 1665
+    },
+    {
+      "audio": "s08.mp3",
+      "dur_sec": 7.3532404,
+      "wb_count": 1,
+      "text": "整个流程就像工厂流水线，各司其职，才能让几行文本，变成真正跑起来的软件。",
+      "index": 8,
+      "start_sec": 55.685,
+      "end_sec": 63.038,
+      "start_frame": 1671,
+      "end_frame": 1891
+    }
+  ]
+}

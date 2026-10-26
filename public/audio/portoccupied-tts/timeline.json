@@ -1,0 +1,855 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-YunxiNeural",
+  "rate": "+18%",
+  "total_sec": 53.64,
+  "total_frames": 1609,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "程序一启动就报错：Address already in use，意思是，这扇门已经被占了。",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 5.52,
+      "start_frame": 0,
+      "end_frame": 166,
+      "dur_sec": 5.52,
+      "words": [
+        {
+          "off_sec": 0.107,
+          "dur_sec": 0.343,
+          "t": "程序"
+        },
+        {
+          "off_sec": 0.462,
+          "dur_sec": 0.122,
+          "t": "一"
+        },
+        {
+          "off_sec": 0.584,
+          "dur_sec": 0.355,
+          "t": "启动"
+        },
+        {
+          "off_sec": 0.964,
+          "dur_sec": 0.098,
+          "t": "就"
+        },
+        {
+          "off_sec": 1.062,
+          "dur_sec": 0.453,
+          "t": "报错"
+        },
+        {
+          "off_sec": 1.76,
+          "dur_sec": 0.527,
+          "t": "Address"
+        },
+        {
+          "off_sec": 2.299,
+          "dur_sec": 0.453,
+          "t": "already"
+        },
+        {
+          "off_sec": 2.764,
+          "dur_sec": 0.147,
+          "t": "in"
+        },
+        {
+          "off_sec": 2.924,
+          "dur_sec": 0.392,
+          "t": "use"
+        },
+        {
+          "off_sec": 3.499,
+          "dur_sec": 0.245,
+          "t": "意思"
+        },
+        {
+          "off_sec": 3.744,
+          "dur_sec": 0.306,
+          "t": "是"
+        },
+        {
+          "off_sec": 4.21,
+          "dur_sec": 0.184,
+          "t": "这"
+        },
+        {
+          "off_sec": 4.393,
+          "dur_sec": 0.184,
+          "t": "扇"
+        },
+        {
+          "off_sec": 4.577,
+          "dur_sec": 0.233,
+          "t": "门"
+        },
+        {
+          "off_sec": 4.834,
+          "dur_sec": 0.208,
+          "t": "已经"
+        },
+        {
+          "off_sec": 5.042,
+          "dur_sec": 0.086,
+          "t": "被"
+        },
+        {
+          "off_sec": 5.14,
+          "dur_sec": 0.208,
+          "t": "占"
+        },
+        {
+          "off_sec": 5.349,
+          "dur_sec": 0.171,
+          "t": "了"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "text": "先说底：报错里的8080是端口号，一台电脑的门牌号就那么多，一个门同时只能住一个程序。",
+      "audio": "s02.mp3",
+      "start_sec": 5.7,
+      "end_sec": 13.14,
+      "start_frame": 171,
+      "end_frame": 394,
+      "dur_sec": 7.44,
+      "words": [
+        {
+          "off_sec": 0.103,
+          "dur_sec": 0.188,
+          "t": "先"
+        },
+        {
+          "off_sec": 0.291,
+          "dur_sec": 0.4,
+          "t": "说底"
+        },
+        {
+          "off_sec": 1.08,
+          "dur_sec": 0.2,
+          "t": "报"
+        },
+        {
+          "off_sec": 1.28,
+          "dur_sec": 0.153,
+          "t": "错"
+        },
+        {
+          "off_sec": 1.434,
+          "dur_sec": 0.071,
+          "t": "里"
+        },
+        {
+          "off_sec": 1.504,
+          "dur_sec": 0.082,
+          "t": "的"
+        },
+        {
+          "off_sec": 1.61,
+          "dur_sec": 0.966,
+          "t": "8080"
+        },
+        {
+          "off_sec": 2.67,
+          "dur_sec": 0.188,
+          "t": "是"
+        },
+        {
+          "off_sec": 2.859,
+          "dur_sec": 0.165,
+          "t": "端"
+        },
+        {
+          "off_sec": 3.035,
+          "dur_sec": 0.412,
+          "t": "口号"
+        },
+        {
+          "off_sec": 3.789,
+          "dur_sec": 0.13,
+          "t": "一"
+        },
+        {
+          "off_sec": 3.919,
+          "dur_sec": 0.118,
+          "t": "台"
+        },
+        {
+          "off_sec": 4.048,
+          "dur_sec": 0.247,
+          "t": "电脑"
+        },
+        {
+          "off_sec": 4.295,
+          "dur_sec": 0.059,
+          "t": "的"
+        },
+        {
+          "off_sec": 4.366,
+          "dur_sec": 0.471,
+          "t": "门牌号"
+        },
+        {
+          "off_sec": 4.861,
+          "dur_sec": 0.094,
+          "t": "就"
+        },
+        {
+          "off_sec": 4.967,
+          "dur_sec": 0.188,
+          "t": "那么"
+        },
+        {
+          "off_sec": 5.155,
+          "dur_sec": 0.247,
+          "t": "多"
+        },
+        {
+          "off_sec": 5.685,
+          "dur_sec": 0.224,
+          "t": "一个"
+        },
+        {
+          "off_sec": 5.909,
+          "dur_sec": 0.224,
+          "t": "门"
+        },
+        {
+          "off_sec": 6.156,
+          "dur_sec": 0.33,
+          "t": "同时"
+        },
+        {
+          "off_sec": 6.498,
+          "dur_sec": 0.224,
+          "t": "只能"
+        },
+        {
+          "off_sec": 6.733,
+          "dur_sec": 0.13,
+          "t": "住"
+        },
+        {
+          "off_sec": 6.863,
+          "dur_sec": 0.177,
+          "t": "一个"
+        },
+        {
+          "off_sec": 7.051,
+          "dur_sec": 0.389,
+          "t": "程序"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "text": "谁占的门？一行命令揪出来。Windows用netstat -ano，找到占用8080的那一行，最后一列就是PID。",
+      "audio": "s03.mp3",
+      "start_sec": 13.32,
+      "end_sec": 22.008,
+      "start_frame": 400,
+      "end_frame": 660,
+      "dur_sec": 8.688,
+      "words": [
+        {
+          "off_sec": 0.101,
+          "dur_sec": 0.325,
+          "t": "谁"
+        },
+        {
+          "off_sec": 0.426,
+          "dur_sec": 0.534,
+          "t": "占的门"
+        },
+        {
+          "off_sec": 1.473,
+          "dur_sec": 0.186,
+          "t": "一"
+        },
+        {
+          "off_sec": 1.659,
+          "dur_sec": 0.174,
+          "t": "行"
+        },
+        {
+          "off_sec": 1.844,
+          "dur_sec": 0.278,
+          "t": "命令"
+        },
+        {
+          "off_sec": 2.146,
+          "dur_sec": 0.186,
+          "t": "揪"
+        },
+        {
+          "off_sec": 2.332,
+          "dur_sec": 0.313,
+          "t": "出来"
+        },
+        {
+          "off_sec": 3.167,
+          "dur_sec": 0.476,
+          "t": "Windows"
+        },
+        {
+          "off_sec": 3.654,
+          "dur_sec": 0.232,
+          "t": "用"
+        },
+        {
+          "off_sec": 3.886,
+          "dur_sec": 0.452,
+          "t": "netstat"
+        },
+        {
+          "off_sec": 4.35,
+          "dur_sec": 0.476,
+          "t": "ano"
+        },
+        {
+          "off_sec": 4.988,
+          "dur_sec": 0.255,
+          "t": "找到"
+        },
+        {
+          "off_sec": 5.255,
+          "dur_sec": 0.336,
+          "t": "占用"
+        },
+        {
+          "off_sec": 5.614,
+          "dur_sec": 0.696,
+          "t": "8080"
+        },
+        {
+          "off_sec": 6.31,
+          "dur_sec": 0.07,
+          "t": "的"
+        },
+        {
+          "off_sec": 6.391,
+          "dur_sec": 0.093,
+          "t": "那"
+        },
+        {
+          "off_sec": 6.484,
+          "dur_sec": 0.07,
+          "t": "一"
+        },
+        {
+          "off_sec": 6.554,
+          "dur_sec": 0.302,
+          "t": "行"
+        },
+        {
+          "off_sec": 7.099,
+          "dur_sec": 0.302,
+          "t": "最后"
+        },
+        {
+          "off_sec": 7.412,
+          "dur_sec": 0.104,
+          "t": "一"
+        },
+        {
+          "off_sec": 7.516,
+          "dur_sec": 0.128,
+          "t": "列"
+        },
+        {
+          "off_sec": 7.656,
+          "dur_sec": 0.128,
+          "t": "就"
+        },
+        {
+          "off_sec": 7.783,
+          "dur_sec": 0.255,
+          "t": "是"
+        },
+        {
+          "off_sec": 8.143,
+          "dur_sec": 0.545,
+          "t": "PID"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "text": "Mac和Linux用lsof -i:8080，直接把占门的进程揪出来。",
+      "audio": "s04.mp3",
+      "start_sec": 22.188,
+      "end_sec": 27.756,
+      "start_frame": 666,
+      "end_frame": 833,
+      "dur_sec": 5.568,
+      "words": [
+        {
+          "off_sec": 0.107,
+          "dur_sec": 0.502,
+          "t": "Mac"
+        },
+        {
+          "off_sec": 0.609,
+          "dur_sec": 0.22,
+          "t": "和"
+        },
+        {
+          "off_sec": 0.841,
+          "dur_sec": 0.576,
+          "t": "Linux"
+        },
+        {
+          "off_sec": 1.429,
+          "dur_sec": 0.208,
+          "t": "用"
+        },
+        {
+          "off_sec": 1.637,
+          "dur_sec": 0.38,
+          "t": "lsof"
+        },
+        {
+          "off_sec": 2.029,
+          "dur_sec": 0.355,
+          "t": "i"
+        },
+        {
+          "off_sec": 2.727,
+          "dur_sec": 0.98,
+          "t": "8080"
+        },
+        {
+          "off_sec": 3.927,
+          "dur_sec": 0.294,
+          "t": "直接"
+        },
+        {
+          "off_sec": 4.233,
+          "dur_sec": 0.11,
+          "t": "把"
+        },
+        {
+          "off_sec": 4.368,
+          "dur_sec": 0.245,
+          "t": "占门"
+        },
+        {
+          "off_sec": 4.613,
+          "dur_sec": 0.073,
+          "t": "的"
+        },
+        {
+          "off_sec": 4.699,
+          "dur_sec": 0.367,
+          "t": "进程"
+        },
+        {
+          "off_sec": 5.091,
+          "dur_sec": 0.147,
+          "t": "揪"
+        },
+        {
+          "off_sec": 5.237,
+          "dur_sec": 0.331,
+          "t": "出来"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "text": "拿到PID，先查身份：Windows用tasklist，Mac和Linux用ps，看看占门的到底是谁。",
+      "audio": "s05.mp3",
+      "start_sec": 27.936,
+      "end_sec": 35.496,
+      "start_frame": 838,
+      "end_frame": 1065,
+      "dur_sec": 7.56,
+      "words": [
+        {
+          "off_sec": 0.102,
+          "dur_sec": 0.341,
+          "t": "拿到"
+        },
+        {
+          "off_sec": 0.443,
+          "dur_sec": 0.599,
+          "t": "PID"
+        },
+        {
+          "off_sec": 1.277,
+          "dur_sec": 0.223,
+          "t": "先"
+        },
+        {
+          "off_sec": 1.5,
+          "dur_sec": 0.106,
+          "t": "查"
+        },
+        {
+          "off_sec": 1.617,
+          "dur_sec": 0.388,
+          "t": "身份"
+        },
+        {
+          "off_sec": 2.31,
+          "dur_sec": 0.493,
+          "t": "Windows"
+        },
+        {
+          "off_sec": 2.815,
+          "dur_sec": 0.2,
+          "t": "用"
+        },
+        {
+          "off_sec": 3.027,
+          "dur_sec": 0.74,
+          "t": "tasklist"
+        },
+        {
+          "off_sec": 4.037,
+          "dur_sec": 0.388,
+          "t": "Mac"
+        },
+        {
+          "off_sec": 4.436,
+          "dur_sec": 0.164,
+          "t": "和"
+        },
+        {
+          "off_sec": 4.612,
+          "dur_sec": 0.517,
+          "t": "Linux"
+        },
+        {
+          "off_sec": 5.141,
+          "dur_sec": 0.188,
+          "t": "用"
+        },
+        {
+          "off_sec": 5.34,
+          "dur_sec": 0.552,
+          "t": "ps"
+        },
+        {
+          "off_sec": 6.057,
+          "dur_sec": 0.352,
+          "t": "看看"
+        },
+        {
+          "off_sec": 6.433,
+          "dur_sec": 0.294,
+          "t": "占门"
+        },
+        {
+          "off_sec": 6.726,
+          "dur_sec": 0.117,
+          "t": "的"
+        },
+        {
+          "off_sec": 6.867,
+          "dur_sec": 0.258,
+          "t": "到底"
+        },
+        {
+          "off_sec": 7.137,
+          "dur_sec": 0.117,
+          "t": "是"
+        },
+        {
+          "off_sec": 7.255,
+          "dur_sec": 0.305,
+          "t": "谁"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "text": "是自己忘了关的旧程序，直接杀掉；是系统重要进程，就改个端口躲开。",
+      "audio": "s06.mp3",
+      "start_sec": 35.676,
+      "end_sec": 41.724,
+      "start_frame": 1070,
+      "end_frame": 1252,
+      "dur_sec": 6.048,
+      "words": [
+        {
+          "off_sec": 0.106,
+          "dur_sec": 0.23,
+          "t": "是"
+        },
+        {
+          "off_sec": 0.348,
+          "dur_sec": 0.194,
+          "t": "自己"
+        },
+        {
+          "off_sec": 0.565,
+          "dur_sec": 0.145,
+          "t": "忘"
+        },
+        {
+          "off_sec": 0.711,
+          "dur_sec": 0.085,
+          "t": "了"
+        },
+        {
+          "off_sec": 0.82,
+          "dur_sec": 0.194,
+          "t": "关"
+        },
+        {
+          "off_sec": 1.013,
+          "dur_sec": 0.073,
+          "t": "的"
+        },
+        {
+          "off_sec": 1.098,
+          "dur_sec": 0.109,
+          "t": "旧"
+        },
+        {
+          "off_sec": 1.207,
+          "dur_sec": 0.508,
+          "t": "程序"
+        },
+        {
+          "off_sec": 1.945,
+          "dur_sec": 0.387,
+          "t": "直接"
+        },
+        {
+          "off_sec": 2.345,
+          "dur_sec": 0.52,
+          "t": "杀掉"
+        },
+        {
+          "off_sec": 3.24,
+          "dur_sec": 0.182,
+          "t": "是"
+        },
+        {
+          "off_sec": 3.434,
+          "dur_sec": 0.399,
+          "t": "系统"
+        },
+        {
+          "off_sec": 3.857,
+          "dur_sec": 0.266,
+          "t": "重要"
+        },
+        {
+          "off_sec": 4.136,
+          "dur_sec": 0.52,
+          "t": "进程"
+        },
+        {
+          "off_sec": 4.85,
+          "dur_sec": 0.145,
+          "t": "就"
+        },
+        {
+          "off_sec": 5.007,
+          "dur_sec": 0.133,
+          "t": "改"
+        },
+        {
+          "off_sec": 5.14,
+          "dur_sec": 0.061,
+          "t": "个"
+        },
+        {
+          "off_sec": 5.213,
+          "dur_sec": 0.363,
+          "t": "端口"
+        },
+        {
+          "off_sec": 5.588,
+          "dur_sec": 0.46,
+          "t": "躲开"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "text": "口诀记好：报错先看端口号，命令找PID，确认身份再动手，别乱杀。",
+      "audio": "s07.mp3",
+      "start_sec": 41.904,
+      "end_sec": 47.712,
+      "start_frame": 1257,
+      "end_frame": 1431,
+      "dur_sec": 5.808,
+      "words": [
+        {
+          "off_sec": 0.106,
+          "dur_sec": 0.315,
+          "t": "口诀"
+        },
+        {
+          "off_sec": 0.42,
+          "dur_sec": 0.412,
+          "t": "记好"
+        },
+        {
+          "off_sec": 1.171,
+          "dur_sec": 0.327,
+          "t": "报错"
+        },
+        {
+          "off_sec": 1.522,
+          "dur_sec": 0.145,
+          "t": "先"
+        },
+        {
+          "off_sec": 1.667,
+          "dur_sec": 0.121,
+          "t": "看"
+        },
+        {
+          "off_sec": 1.788,
+          "dur_sec": 0.109,
+          "t": "端"
+        },
+        {
+          "off_sec": 1.91,
+          "dur_sec": 0.424,
+          "t": "口号"
+        },
+        {
+          "off_sec": 2.563,
+          "dur_sec": 0.291,
+          "t": "命令"
+        },
+        {
+          "off_sec": 2.866,
+          "dur_sec": 0.157,
+          "t": "找"
+        },
+        {
+          "off_sec": 3.023,
+          "dur_sec": 0.533,
+          "t": "PID"
+        },
+        {
+          "off_sec": 3.822,
+          "dur_sec": 0.315,
+          "t": "确认"
+        },
+        {
+          "off_sec": 4.149,
+          "dur_sec": 0.351,
+          "t": "身份"
+        },
+        {
+          "off_sec": 4.525,
+          "dur_sec": 0.133,
+          "t": "再"
+        },
+        {
+          "off_sec": 4.658,
+          "dur_sec": 0.363,
+          "t": "动手"
+        },
+        {
+          "off_sec": 5.227,
+          "dur_sec": 0.121,
+          "t": "别"
+        },
+        {
+          "off_sec": 5.36,
+          "dur_sec": 0.157,
+          "t": "乱"
+        },
+        {
+          "off_sec": 5.517,
+          "dur_sec": 0.291,
+          "t": "杀"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "text": "这张排查卡截图存好，下次再遇到Address already in use，一分钟解决。",
+      "audio": "s08.mp3",
+      "start_sec": 47.892,
+      "end_sec": 53.46,
+      "start_frame": 1437,
+      "end_frame": 1604,
+      "dur_sec": 5.568,
+      "words": [
+        {
+          "off_sec": 0.107,
+          "dur_sec": 0.183,
+          "t": "这"
+        },
+        {
+          "off_sec": 0.29,
+          "dur_sec": 0.171,
+          "t": "张"
+        },
+        {
+          "off_sec": 0.485,
+          "dur_sec": 0.513,
+          "t": "排查卡"
+        },
+        {
+          "off_sec": 1.023,
+          "dur_sec": 0.269,
+          "t": "截图"
+        },
+        {
+          "off_sec": 1.304,
+          "dur_sec": 0.464,
+          "t": "存好"
+        },
+        {
+          "off_sec": 1.988,
+          "dur_sec": 0.403,
+          "t": "下次"
+        },
+        {
+          "off_sec": 2.404,
+          "dur_sec": 0.098,
+          "t": "再"
+        },
+        {
+          "off_sec": 2.514,
+          "dur_sec": 0.403,
+          "t": "遇到"
+        },
+        {
+          "off_sec": 3.014,
+          "dur_sec": 0.562,
+          "t": "Address"
+        },
+        {
+          "off_sec": 3.589,
+          "dur_sec": 0.44,
+          "t": "already"
+        },
+        {
+          "off_sec": 4.041,
+          "dur_sec": 0.147,
+          "t": "in"
+        },
+        {
+          "off_sec": 4.2,
+          "dur_sec": 0.367,
+          "t": "use"
+        },
+        {
+          "off_sec": 4.774,
+          "dur_sec": 0.354,
+          "t": "一分钟"
+        },
+        {
+          "off_sec": 5.14,
+          "dur_sec": 0.428,
+          "t": "解决"
+        }
+      ]
+    }
+  ]
+}

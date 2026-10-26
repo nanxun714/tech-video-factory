@@ -1,0 +1,69 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-YunjianNeural",
+  "rate": "+15%",
+  "total_sec": 68.868,
+  "total_frames": 2066,
+  "sentences": [
+    {
+      "index": 1,
+      "start_frame": 0,
+      "end_frame": 114
+    },
+    {
+      "index": 2,
+      "start_frame": 120,
+      "end_frame": 216
+    },
+    {
+      "index": 3,
+      "start_frame": 222,
+      "end_frame": 472
+    },
+    {
+      "index": 4,
+      "start_frame": 477,
+      "end_frame": 631
+    },
+    {
+      "index": 5,
+      "start_frame": 636,
+      "end_frame": 809
+    },
+    {
+      "index": 6,
+      "start_frame": 814,
+      "end_frame": 1018
+    },
+    {
+      "index": 7,
+      "start_frame": 1023,
+      "end_frame": 1184
+    },
+    {
+      "index": 8,
+      "start_frame": 1190,
+      "end_frame": 1399
+    },
+    {
+      "index": 9,
+      "start_frame": 1405,
+      "end_frame": 1561
+    },
+    {
+      "index": 10,
+      "start_frame": 1566,
+      "end_frame": 1767
+    },
+    {
+      "index": 11,
+      "start_frame": 1773,
+      "end_frame": 1893
+    },
+    {
+      "index": 12,
+      "start_frame": 1898,
+      "end_frame": 2066
+    }
+  ]
+}

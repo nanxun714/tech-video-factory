@@ -1,0 +1,117 @@
+{
+  "fps": 30,
+  "voice": "zh-CN-YunxiNeural",
+  "rate": "+18%",
+  "total_sec": 64.26,
+  "total_frames": 1928,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "电脑一卡死，网友的第一句话永远是：重启试试。",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 4.392,
+      "start_frame": 0,
+      "end_frame": 132
+    },
+    {
+      "index": 2,
+      "text": "神奇的是，重启还真治好了大部分毛病。它到底在修什么？",
+      "audio": "s02.mp3",
+      "start_sec": 4.572,
+      "end_sec": 9.684,
+      "start_frame": 137,
+      "end_frame": 291
+    },
+    {
+      "index": 3,
+      "text": "程序跑久了，内存里会堆满临时数据：崩溃留下的残渣，占着不放的资源，还有乱了套的状态。",
+      "audio": "s03.mp3",
+      "start_sec": 9.864,
+      "end_sec": 17.184,
+      "start_frame": 296,
+      "end_frame": 516
+    },
+    {
+      "index": 4,
+      "text": "这些脏东西没人清理，越积越多，程序就开始抽风。",
+      "audio": "s04.mp3",
+      "start_sec": 17.364,
+      "end_sec": 22.212,
+      "start_frame": 521,
+      "end_frame": 666
+    },
+    {
+      "index": 5,
+      "text": "而重启，就是把内存整个清空，让所有程序从头再来。",
+      "audio": "s05.mp3",
+      "start_sec": 22.392,
+      "end_sec": 27.264,
+      "start_frame": 672,
+      "end_frame": 818
+    },
+    {
+      "index": 6,
+      "text": "就像考试的草稿纸写满了，擦掉重画，比在一堆乱线里找错误快得多。",
+      "audio": "s06.mp3",
+      "start_sec": 27.444,
+      "end_sec": 33.06,
+      "start_frame": 823,
+      "end_frame": 992
+    },
+    {
+      "index": 7,
+      "text": "因为大部分故障，只是软件的状态乱了，不是硬件坏了。",
+      "audio": "s07.mp3",
+      "start_sec": 33.24,
+      "end_sec": 37.536,
+      "start_frame": 997,
+      "end_frame": 1126
+    },
+    {
+      "index": 8,
+      "text": "所以一张干净的白纸，就能解决九成问题。",
+      "audio": "s08.mp3",
+      "start_sec": 37.716,
+      "end_sec": 41.724,
+      "start_frame": 1131,
+      "end_frame": 1252
+    },
+    {
+      "index": 9,
+      "text": "但注意：如果是硬件坏了，或者文件本身就损毁了，重启一百次也没用。",
+      "audio": "s09.mp3",
+      "start_sec": 41.904,
+      "end_sec": 48.024,
+      "start_frame": 1257,
+      "end_frame": 1441
+    },
+    {
+      "index": 10,
+      "text": "所以记住顺序：先重启，再排查。重启能好的，都不是大毛病。",
+      "audio": "s10.mp3",
+      "start_sec": 48.204,
+      "end_sec": 54.084,
+      "start_frame": 1446,
+      "end_frame": 1623
+    },
+    {
+      "index": 11,
+      "text": "记住这句话：重启不是玄学，是把乱掉的状态清零。",
+      "audio": "s11.mp3",
+      "start_sec": 54.264,
+      "end_sec": 58.8,
+      "start_frame": 1628,
+      "end_frame": 1764
+    },
+    {
+      "index": 12,
+      "text": "学会了点个赞点个关注，下期讲你按 Ctrl+C 的瞬间，电脑做了什么。",
+      "audio": "s12.mp3",
+      "start_sec": 58.98,
+      "end_sec": 64.26,
+      "start_frame": 1769,
+      "end_frame": 1928
+    }
+  ]
+}

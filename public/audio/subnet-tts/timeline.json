@@ -1,0 +1,95 @@
+{
+  "fps": 30,
+  "total_sec": 72.108,
+  "total_frames": 2163,
+  "sentences": [
+    {
+      "audio": "s01.mp3",
+      "dur_sec": 4.4129809,
+      "wb_count": 1,
+      "text": "电脑有了IP地址，为什么还要配置子网掩码？",
+      "index": 1,
+      "start_sec": 0.0,
+      "end_sec": 4.413,
+      "start_frame": 0,
+      "end_frame": 132
+    },
+    {
+      "audio": "s02.mp3",
+      "dur_sec": 10.5769234,
+      "wb_count": 2,
+      "text": "先看IP。IPv4本质是32位二进制数，每8位一组转成十进制，就是192.168.1.10。",
+      "index": 2,
+      "start_sec": 4.593,
+      "end_sec": 15.17,
+      "start_frame": 138,
+      "end_frame": 455
+    },
+    {
+      "audio": "s03.mp3",
+      "dur_sec": 9.7115388,
+      "wb_count": 1,
+      "text": "实际使用时，IP分成两段：前面的网络部分，决定你属于哪个子网；后面的主机部分，区分子网里的设备。",
+      "index": 3,
+      "start_sec": 15.35,
+      "end_sec": 25.062,
+      "start_frame": 460,
+      "end_frame": 752
+    },
+    {
+      "audio": "s04.mp3",
+      "dur_sec": 9.6875002,
+      "wb_count": 2,
+      "text": "电脑发数据前必须先判断：目标和我在不在这个子网？在，直接发送；不在，交给默认网关转发。",
+      "index": 4,
+      "start_sec": 25.242,
+      "end_sec": 34.93,
+      "start_frame": 757,
+      "end_frame": 1048
+    },
+    {
+      "audio": "s05.mp3",
+      "dur_sec": 6.2519233,
+      "wb_count": 1,
+      "text": "可只看IP，根本看不出边界在哪：哪几位是网络，哪几位是主机？",
+      "index": 5,
+      "start_sec": 35.11,
+      "end_sec": 41.362,
+      "start_frame": 1053,
+      "end_frame": 1241
+    },
+    {
+      "audio": "s06.mp3",
+      "dur_sec": 11.3100965,
+      "wb_count": 1,
+      "text": "子网掩码就是来画这条边界的：255.255.255.0，二进制是连续24个1加8个0，1对应网络，0对应主机。",
+      "index": 6,
+      "start_sec": 41.542,
+      "end_sec": 52.852,
+      "start_frame": 1246,
+      "end_frame": 1586
+    },
+    {
+      "audio": "s07.mp3",
+      "dur_sec": 7.8264425,
+      "wb_count": 1,
+      "text": "所以斜杠24，就是255.255.255.0的简写，两种写法是同一回事。",
+      "index": 7,
+      "start_sec": 53.032,
+      "end_sec": 60.858,
+      "start_frame": 1591,
+      "end_frame": 1826
+    },
+    {
+      "audio": "s08.mp3",
+      "dur_sec": 11.0697118,
+      "wb_count": 2,
+      "text": "电脑把IP和掩码按位相与：结果相同，就是同一个子网，直接通信；不同，就走网关。这，就是子网掩码的作用。",
+      "index": 8,
+      "start_sec": 61.038,
+      "end_sec": 72.108,
+      "start_frame": 1831,
+      "end_frame": 2163
+    }
+  ]
+}

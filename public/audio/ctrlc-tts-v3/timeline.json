@@ -1,0 +1,108 @@
+{
+ "fps": 30,
+ "voice": "zh-CN-YunjianNeural",
+ "rate": "+15%",
+ "total_sec": 57.754,
+ "total_frames": 1733,
+ "sentences": [
+  {
+   "index": 1,
+   "text": "复制的东西去哪了？按下Ctrl+C，它真的被复制走了吗？",
+   "audio": "s01.mp3",
+   "start_sec": 0.0,
+   "end_sec": 5.413,
+   "start_frame": 0,
+   "end_frame": 162
+  },
+  {
+   "index": 2,
+   "text": "其实，原文件根本没被拿走。",
+   "audio": "s02.mp3",
+   "start_sec": 5.593,
+   "end_sec": 8.578,
+   "start_frame": 168,
+   "end_frame": 257
+  },
+  {
+   "index": 3,
+   "text": "按下Ctrl+C，系统会把内容复制一份，放进一个叫剪贴板的地方。",
+   "audio": "s03.mp3",
+   "start_sec": 8.758,
+   "end_sec": 14.341,
+   "start_frame": 263,
+   "end_frame": 430
+  },
+  {
+   "index": 4,
+   "text": "你可以把剪贴板理解成，内存里的一块黑板。",
+   "audio": "s04.mp3",
+   "start_sec": 14.521,
+   "end_sec": 18.408,
+   "start_frame": 436,
+   "end_frame": 552
+  },
+  {
+   "index": 5,
+   "text": "粘贴Ctrl+V，就是把黑板上的内容，再抄到你要的位置。",
+   "audio": "s05.mp3",
+   "start_sec": 18.588,
+   "end_sec": 23.486,
+   "start_frame": 558,
+   "end_frame": 705
+  },
+  {
+   "index": 6,
+   "text": "那Ctrl+X呢？它也会把内容放进黑板，但原来的内容会被移走。",
+   "audio": "s06.mp3",
+   "start_sec": 23.666,
+   "end_sec": 29.807,
+   "start_frame": 710,
+   "end_frame": 894
+  },
+  {
+   "index": 7,
+   "text": "不过，黑板通常只有一块。你复制新的内容，旧的就被覆盖了。",
+   "audio": "s07.mp3",
+   "start_sec": 29.987,
+   "end_sec": 35.998,
+   "start_frame": 900,
+   "end_frame": 1080
+  },
+  {
+   "index": 8,
+   "text": "那为什么电脑一重启，剪贴板里的东西也没了？",
+   "audio": "s08.mp3",
+   "start_sec": 36.178,
+   "end_sec": 40.38,
+   "start_frame": 1085,
+   "end_frame": 1211
+  },
+  {
+   "index": 9,
+   "text": "因为剪贴板的数据主要存在内存里，而内存断电后，内容就会消失。",
+   "audio": "s09.mp3",
+   "start_sec": 40.56,
+   "end_sec": 46.403,
+   "start_frame": 1217,
+   "end_frame": 1392
+  },
+  {
+   "index": 10,
+   "text": "复制不是拿走，是抄上黑板。黑板在内存里，重启就擦干净。",
+   "audio": "s10.mp3",
+   "start_sec": 46.583,
+   "end_sec": 52.366,
+   "start_frame": 1397,
+   "end_frame": 1571
+  },
+  {
+   "index": 11,
+   "text": "下一期想看什么？点赞评论加关注，在评论区告诉我。",
+   "audio": "s11.mp3",
+   "start_sec": 52.546,
+   "end_sec": 57.754,
+   "start_frame": 1576,
+   "end_frame": 1733
+  }
+ ]
+}

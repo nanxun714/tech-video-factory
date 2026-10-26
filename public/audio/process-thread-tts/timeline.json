@@ -1,0 +1,98 @@
+{
+  "fps": 30,
+  "rate": "+28%",
+  "total_sec": 45.809,
+  "total_frames": 1374,
+  "sentences": [
+    {
+      "index": 1,
+      "text": "面试问进程和线程，只会背最小单位？面试官直接把你刷了。",
+      "audio": "s01.mp3",
+      "start_sec": 0.0,
+      "end_sec": 4.824,
+      "start_frame": 0,
+      "end_frame": 145,
+      "dur_sec": 4.824
+    },
+    {
+      "index": 2,
+      "text": "他真正想听的，是你能不能讲清楚：程序为什么会卡死。",
+      "audio": "s02.mp3",
+      "start_sec": 5.004,
+      "end_sec": 9.361,
+      "start_frame": 150,
+      "end_frame": 281,
+      "dur_sec": 4.357
+    },
+    {
+      "index": 3,
+      "text": "软件卡死、点不动，多半是负责界面的那个线程被堵住了。",
+      "audio": "s03.mp3",
+      "start_sec": 9.541,
+      "end_sec": 14.073,
+      "start_frame": 286,
+      "end_frame": 422,
+      "dur_sec": 4.532
+    },
+    {
+      "index": 4,
+      "text": "记住这个类比：进程是一套房子，线程是房子里干活的人。",
+      "audio": "s04.mp3",
+      "start_sec": 14.253,
+      "end_sec": 18.62,
+      "start_frame": 428,
+      "end_frame": 559,
+      "dur_sec": 4.366
+    },
+    {
+      "index": 5,
+      "text": "整个微信就是一个进程，收消息、刷朋友圈、加载图片，是三条线程。",
+      "audio": "s05.mp3",
+      "start_sec": 18.8,
+      "end_sec": 24.377,
+      "start_frame": 564,
+      "end_frame": 731,
+      "dur_sec": 5.577
+    },
+    {
+      "index": 6,
+      "text": "图片那条线程堵住了，收消息那条照常跑——所以微信能收消息，朋友圈却在转圈。",
+      "audio": "s06.mp3",
+      "start_sec": 24.557,
+      "end_sec": 31.209,
+      "start_frame": 737,
+      "end_frame": 936,
+      "dur_sec": 6.652
+    },
+    {
+      "index": 7,
+      "text": "核心区别：进程管资源隔离，线程管执行，一个进程带多条线程。",
+      "audio": "s07.mp3",
+      "start_sec": 31.389,
+      "end_sec": 36.751,
+      "start_frame": 942,
+      "end_frame": 1103,
+      "dur_sec": 5.363
+    },
+    {
+      "index": 8,
+      "text": "面试别再背定义了，把这个例子讲清楚，面试官才信你。",
+      "audio": "s08.mp3",
+      "start_sec": 36.931,
+      "end_sec": 41.229,
+      "start_frame": 1108,
+      "end_frame": 1237,
+      "dur_sec": 4.298
+    },
+    {
+      "index": 9,
+      "text": "觉得讲明白了，点个赞，面试前把这组知识点再刷一遍。",
+      "audio": "s09.mp3",
+      "start_sec": 41.409,
+      "end_sec": 45.629,
+      "start_frame": 1242,
+      "end_frame": 1369,
+      "dur_sec": 4.22
+    }
+  ]
+}
