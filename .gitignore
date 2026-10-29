@@ -8,3 +8,4 @@ __pycache__/
 .remotion/
 TEMP/
 .env
+s*_raw.wav/
