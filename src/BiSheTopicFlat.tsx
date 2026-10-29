@@ -617,16 +617,16 @@ const PageAsk: React.FC = () => (
       </div>
       <div style={{display: "flex", gap: 28, justifyContent: "center"}}>
         <div style={{width: 640, height: 220, borderRadius: 20, backgroundColor: BLUE_BG, border: `4px solid ${BLUE}`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12}}>
-          <div style={{fontFamily: F, fontSize: 34, fontWeight: 900, color: BLUE}}>A</div>
+          <div style={{fontFamily: F, fontSize: 38, fontWeight: 900, color: BLUE}}>1</div>
           <div style={{fontFamily: F, fontSize: 40, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>完全没想好题目</div>
         </div>
         <div style={{width: 640, height: 220, borderRadius: 20, backgroundColor: ORANGE_BG, border: `4px solid ${ORANGE}`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12}}>
-          <div style={{fontFamily: F, fontSize: 34, fontWeight: 900, color: ORANGE}}>B</div>
+          <div style={{fontFamily: F, fontSize: 38, fontWeight: 900, color: ORANGE}}>2</div>
           <div style={{fontFamily: F, fontSize: 36, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>选了，但不知道能不能做出来</div>
         </div>
       </div>
       <div style={{textAlign: "center", marginTop: 28, fontFamily: F, fontSize: 32, fontWeight: 800, color: SUBC, whiteSpace: "nowrap"}}>
-        评论区扣 A 或 B
+        评论区扣 1 或 2
       </div>
     </div>
     <div style={{position: "absolute", top: 840, left: 0, width: W, textAlign: "center"}}>
