@@ -15,7 +15,7 @@ CUT_PUNC = "，。？！；：、…,.;?!"
 REF = r"D:\MamboTTS\models\refer.wav"
 REF_TEXT = "大家好，欢迎来到我的频道，今天给大家分享一个有趣的内容"
 FPS = 30
-GAP = 0.08
+GAP = 0.06
 TAIL_FRAMES = 6  # 话音落 +0.2s 干脆收（2026-10-27 用户拍板：结尾不要垫乐音）
 
 AUDIO_DIR = os.path.dirname(os.path.abspath(__file__))

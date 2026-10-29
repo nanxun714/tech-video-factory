@@ -268,7 +268,7 @@ const PageHook: React.FC = () => {
       <BigTitle parts={[{t: "题目", c: INK}, {t: "越难", c: RED}, {t: "，分越高？", c: INK}]} y={250} size={92} />
       <div style={{position: "absolute", right: 120, top: 340, fontFamily: F, fontSize: 300, fontWeight: 900, color: "#dbe4ee", width: 300, textAlign: "center", opacity: q1}}>?</div>
       <div style={{position: "absolute", left: 90, top: 420, fontFamily: F, fontSize: 190, fontWeight: 900, color: "#e7edf4", width: 200, textAlign: "center", opacity: pulse(frame + 14, 18, 0.3, 0.75)}}>?</div>
-      <PopAt f={at(0, 0.85) - 6}>
+      <PopAt f={at(0, 0.55) - 6}>
         <div style={{position: "absolute", left: "50%", top: 500, transform: "translateX(-50%)"}}>
           <svg width={330} height={330} viewBox="0 0 360 360" style={{overflow: "visible", transform: "rotate(-12deg)"}}>
             <circle cx={180} cy={180} r={160} fill="none" stroke={RED} strokeWidth={16} opacity={0.9} />
@@ -283,47 +283,62 @@ const PageHook: React.FC = () => {
   );
 };
 
-// ============ P2 双题对比（具体案例钩子） ============
-const PageVs: React.FC = () => (
-  <AbsoluteFill>
-    <BigTitle parts={[{t: "这两个题目，你", c: INK}, {t: "看好哪个", c: ORANGE}, {t: "？", c: INK}]} y={90} size={66} />
-    <PopAt f={SENT[2] + 4}>
-      <FlatCard x={110} y={290} w={820} h={420} chip="左边" chipColor={SUBC} fill={RED_BG}>
-        <div style={{position: "absolute", left: 0, top: 120, width: 820, textAlign: "center"}}>
-          <div style={{fontFamily: F, fontSize: 48, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>基于深度学习的图像识别研究</div>
+// ============ P2 双题对比（具体案例钩子） ============// ============ P2 双题对比（提问时双卡即在场，念到哪边哪边高亮） ============
+const PageVs: React.FC = () => {
+  const frame = useCurrentFrame();
+  const activeL = frame >= SENT[2] && frame < SENT[3];
+  const activeR = frame >= SENT[3] && frame < SENT[4];
+  const glowL = interpolate(frame, [SENT[2], SENT[2] + 6], [0, 1], clamp);
+  const glowR = interpolate(frame, [SENT[3], SENT[3] + 6], [0, 1], clamp);
+  const scaleL = activeL ? 1.04 : 1;
+  const scaleR = activeR ? 1.04 : 1;
+  return (
+    <AbsoluteFill>
+      <BigTitle parts={[{t: "这两个题目，你", c: INK}, {t: "看好哪个", c: ORANGE}, {t: "？", c: INK}]} y={90} size={66} />
+      <PopAt f={SENT[1] + 4}>
+        <div style={{position: "absolute", left: 110, top: 290, width: 820, height: 420, transform: `scale(${scaleL})`, transformOrigin: "center center"}}>
+          {frame >= SENT[2] && <div style={{position: "absolute", left: -7, top: -7, width: 834, height: 434, border: `6px solid ${RED}`, borderRadius: 28, boxShadow: `0 0 0 6px rgba(224,86,86,0.15)`, opacity: glowL}} />}
+          <FlatCard x={0} y={0} w={820} h={420} chip="左边" chipColor={SUBC} fill={RED_BG}>
+            <div style={{position: "absolute", left: 0, top: 120, width: 820, textAlign: "center"}}>
+              <div style={{fontFamily: F, fontSize: 48, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>基于深度学习的图像识别研究</div>
+            </div>
+            <div style={{position: "absolute", left: 210, top: 280, width: 400, height: 74, borderRadius: 999, backgroundColor: "#fff", border: `3px solid ${RED}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 34, fontWeight: 900, color: RED}}>
+              空泛 · 没法下笔
+            </div>
+          </FlatCard>
         </div>
-        <div style={{position: "absolute", left: 210, top: 280, width: 400, height: 74, borderRadius: 999, backgroundColor: "#fff", border: `3px solid ${RED}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 34, fontWeight: 900, color: RED}}>
-          空泛 · 没法下笔
+      </PopAt>
+      <PopAt f={SENT[1] + 16}>
+        <div style={{position: "absolute", left: 990, top: 290, width: 820, height: 420, transform: `scale(${scaleR})`, transformOrigin: "center center"}}>
+          {frame >= SENT[3] && <div style={{position: "absolute", left: -7, top: -7, width: 834, height: 434, border: `6px solid ${GREEN}`, borderRadius: 28, boxShadow: `0 0 0 6px rgba(63,174,122,0.15)`, opacity: glowR}} />}
+          <FlatCard x={0} y={0} w={820} h={420} chip="右边" chipColor={GREEN} fill={GREEN_BG}>
+            <div style={{position: "absolute", left: 0, top: 120, width: 820, textAlign: "center"}}>
+              <div style={{fontFamily: F, fontSize: 42, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>基于<span style={{color: BLUE}}>YOLO</span>的校园道路车辆检测系统</div>
+            </div>
+            <div style={{position: "absolute", left: 210, top: 280, width: 400, height: 74, borderRadius: 999, backgroundColor: "#fff", border: `3px solid ${GREEN}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 34, fontWeight: 900, color: GREEN}}>
+              具体 · 能直接开工
+            </div>
+          </FlatCard>
         </div>
-      </FlatCard>
-    </PopAt>
-    <PopAt f={SENT[3] + 4}>
-      <FlatCard x={990} y={290} w={820} h={420} chip="右边" chipColor={GREEN} fill={GREEN_BG}>
-        <div style={{position: "absolute", left: 0, top: 120, width: 820, textAlign: "center"}}>
-          <div style={{fontFamily: F, fontSize: 42, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>基于<span style={{color: BLUE}}>YOLO</span>的校园道路车辆检测系统</div>
+      </PopAt>
+      <PopAt f={SENT[2] - 10}>
+        <div style={{position: "absolute", left: 890, top: 430, width: 140, height: 140, borderRadius: "50%", backgroundColor: ORANGE, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 56, fontWeight: 900, boxShadow: "0 12px 28px rgba(240,145,45,0.4)", border: "6px solid #fff"}}>VS</div>
+      </PopAt>
+      <PopAt f={at(4, 0.1)}>
+        <div style={{position: "absolute", left: 260, top: 800, width: 640, height: 88, backgroundColor: RED_BG, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <span style={{fontFamily: F, fontSize: 38, fontWeight: 900, color: RED, whiteSpace: "nowrap"}}>空到没法下笔</span>
         </div>
-        <div style={{position: "absolute", left: 210, top: 280, width: 400, height: 74, borderRadius: 999, backgroundColor: "#fff", border: `3px solid ${GREEN}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 34, fontWeight: 900, color: GREEN}}>
-          具体 · 能直接开工
+      </PopAt>
+      <PopAt f={at(4, 0.55)}>
+        <div style={{position: "absolute", left: 1020, top: 800, width: 640, height: 88, backgroundColor: GREEN_BG, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center"}}>
+          <span style={{fontFamily: F, fontSize: 38, fontWeight: 900, color: GREEN, whiteSpace: "nowrap"}}>具体到能直接开工</span>
         </div>
-      </FlatCard>
-    </PopAt>
-    <PopAt f={SENT[3] - 20}>
-      <div style={{position: "absolute", left: 890, top: 430, width: 140, height: 140, borderRadius: "50%", backgroundColor: ORANGE, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 56, fontWeight: 900, boxShadow: "0 12px 28px rgba(240,145,45,0.4)", border: "6px solid #fff"}}>VS</div>
-    </PopAt>
-    <PopAt f={at(4, 0.1)}>
-      <div style={{position: "absolute", left: 260, top: 800, width: 640, height: 88, backgroundColor: RED_BG, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center"}}>
-        <span style={{fontFamily: F, fontSize: 38, fontWeight: 900, color: RED, whiteSpace: "nowrap"}}>空到没法下笔</span>
-      </div>
-    </PopAt>
-    <PopAt f={at(4, 0.55)}>
-      <div style={{position: "absolute", left: 1020, top: 800, width: 640, height: 88, backgroundColor: GREEN_BG, borderRadius: 999, display: "flex", alignItems: "center", justifyContent: "center"}}>
-        <span style={{fontFamily: F, fontSize: 38, fontWeight: 900, color: GREEN, whiteSpace: "nowrap"}}>具体到能直接开工</span>
-      </div>
-    </PopAt>
-    <Sparkle x={930} y={300} s={0.75} phase={1} />
-    <Sparkle x={1800} y={280} s={0.6} color="#f2d9a8" phase={2} />
-  </AbsoluteFill>
-);
+      </PopAt>
+      <Sparkle x={930} y={300} s={0.75} phase={1} />
+      <Sparkle x={1800} y={280} s={0.6} color="#f2d9a8" phase={2} />
+    </AbsoluteFill>
+  );
+};
 
 // ============ P3 填坑 + 三个错 ============
 const PageDebt: React.FC = () => (
@@ -467,11 +482,13 @@ const PageEmpty: React.FC = () => {
           换 成
         </div>
       </PopAt>
-      <svg width={W} height={1080} style={{position: "absolute", left: 0, top: 0, overflow: "visible", pointerEvents: "none"}}>
-        <line x1={960} y1={404} x2={960} y2={428} stroke={ORANGE} strokeWidth={6} strokeLinecap="round" />
-        <line x1={960} y1={492} x2={960} y2={516} stroke={ORANGE} strokeWidth={6} strokeLinecap="round" />
-        <path d="M 940 510 L 960 528 L 980 510" fill="none" stroke={ORANGE} strokeWidth={6} strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
+      <PopAt f={SENT[10] + 2}>
+        <svg width={W} height={1080} style={{position: "absolute", left: 0, top: 0, overflow: "visible", pointerEvents: "none"}}>
+          <line x1={960} y1={404} x2={960} y2={428} stroke={ORANGE} strokeWidth={6} strokeLinecap="round" />
+          <line x1={960} y1={492} x2={960} y2={516} stroke={ORANGE} strokeWidth={6} strokeLinecap="round" />
+          <path d="M 940 510 L 960 528 L 980 510" fill="none" stroke={ORANGE} strokeWidth={6} strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </PopAt>
 
       {/* 推荐卡 */}
       <PopAt f={tHuan + 8}>
@@ -635,7 +652,7 @@ const PAGES: {C: React.FC; from: number; dur: number}[] = [
 
 const SFX: {f: number; w: string; v: number}[] = [
   ...[1, 5, 7, 9, 10, 14, 20, 22].map((i) => ({f: SENT[i], w: "whoosh.wav", v: 0.2})),
-  {f: at(0, 0.85) - 6, w: "error.wav", v: 0.24},
+  {f: at(0, 0.55) - 6, w: "error.wav", v: 0.24},
   {f: SENT[2] + 4, w: "pop.wav", v: 0.24},
   {f: SENT[3] + 4, w: "pop.wav", v: 0.24},
   {f: SENT[4] + 4, w: "success.wav", v: 0.22},
