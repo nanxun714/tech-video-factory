@@ -2,9 +2,9 @@
   "fps": 30,
   "engine": "GPT-SoVITS/manbo",
   "speed": 1.5,
-  "total_sec": 78.38,
-  "narration_end": 2351,
-  "duration": 2357,
+  "total_sec": 81.07,
+  "narration_end": 2432,
+  "duration": 2438,
   "sentences": [
     {
       "index": 1,
@@ -341,6 +341,20 @@
       "end_sec": 78.38,
       "start_frame": 2275,
       "end_frame": 2351
+    },
+    {
+      "index": 25,
+      "text": "评论区扣A或B，告诉我。",
+      "audio": "s25.wav",
+      "raw_dur": 3.06,
+      "speech_start": 0.18,
+      "speech_end": 2.81,
+      "dur_sec": 2.63,
+      "cps": 4.56,
+      "start_sec": 78.44,
+      "end_sec": 81.07,
+      "start_frame": 2353,
+      "end_frame": 2432
     }
   ]
 }

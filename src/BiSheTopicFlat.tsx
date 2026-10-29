@@ -671,6 +671,7 @@ const SFX: {f: number; w: string; v: number}[] = [
   {f: SENT[19] + 2, w: "ding.wav", v: 0.26},
   {f: at(20, 0.5) - 4, w: "ding.wav", v: 0.28},
   {f: SENT[22] + 4, w: "pop.wav", v: 0.28},
+  {f: SENT[24] + 4, w: "pop.wav", v: 0.26},
 ];
 
 // 铁律⑫：金句段 [SENT[20], SENT[22]) 组件级停用字幕；字幕放大版（52px，手机可读）
@@ -706,7 +707,7 @@ export const BiSheTopicFlat: React.FC = () => {
       <BrandCorner light />
 
       {SENT.map((start, i) => (
-        <Sequence key={`v-${i}`} from={start} durationInFrames={i < 23 ? SENT[i + 1] - start + 10 : DUR - start}>
+        <Sequence key={`v-${i}`} from={start} durationInFrames={i < SENT.length - 1 ? SENT[i + 1] - start + 10 : DUR - start}>
           <Audio src={staticFile(`audio/bishe-tts/s${("0" + (i + 1)).slice(-2)}.wav`)} volume={1} />
         </Sequence>
       ))}
