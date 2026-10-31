@@ -110,9 +110,18 @@ python <skill目录>\scripts\qc_precheck.py <视频.mp4> <纯ASCII输出目录> 
 - [ ] **页内文字不压图形/边框**：卡内说明文字与插画图形间距 ≥18px；文字距容器描边留白，字符不许被边框切半
 - [ ] **emoji 风险字符一并禁**：⏳⌛▶ 等 emoji-presentation 字符与 emoji 同禁（品牌/画面文字全适用）
 
-## batch10 统一管线（2026-09-14 定稿，新片优先走这条）
+## §VLM 批量判帧（2026-10-30 新增基建：Qwen3-VL-4B 本地判帧，判帧提速的前置预检）
 
-- 数据驱动：`public/audio/gen_batch10.py` 一次生成 TTS+词级锚点+字幕 → `src/batch10/<topic>Data.ts`（SENT=真实句起始帧、SUBS、WORDS、DUR），组件只 import 数据，不硬编码帧号
+**架构（重要，别改回"让模型自己判 pass/fail"）**：校准实测 Qwen3-VL-4B 视觉可靠（开放问答逐字报全）但让它自己对照预期判 pass/fail 会自相矛盾（seen 报了、issues 说缺）。所以模型只干 OCR 报所见（seen）+ 报画面缺陷（defects），**必现元素比对由脚本对 task.json 的 must 关键词做确定性子串匹配**（去标点归一化）。校准：毕设01 已知全过成片 82 帧，期望正确时全对；3 个"fail"全是期望手算错（模型连"92 分还在滚动中显示 89"都对）。
+
+- 启动：`D:\AIModels\vlm-judge\bin\llama-server.exe -m ..\models\Qwen3VL-4B-Instruct-Q4_K_M.gguf --mmproj ..\models\mmproj-Qwen3VL-4B-Instruct-F16.gguf -ngl 99 -c 8192 -np 2 --port 8900`（显存 ~4.9G，**用完必须杀，TTS 引擎与其不共存**；**-np 4 / -c 16384 会 OOM 段错误**，6G 卡别加大，判帧脚本 `--workers 2` 与槽数对应）
+- 判帧：`python <skill>/scripts/qc_vlm_judge.py --frames-dir <qc_auto输出> --task task.json --out report.json`；task.json = `{"fXXXX.png": {"must": ["误区一","迷信难度"], "note": "说明"}}`；单帧排查 `--frame fXXXX.png --ask "问题"`
+- must 关键词从组件代码推导，**只选画面大字必现文本**（标签/标题/卡内大字/角标）；PopAt 出生帧当帧 p=0 不可见，元素出生帧必须 +3 帧缓冲才进 must
+- 期望手算高危点（本次踩了两个）：SENT_DUR 索引错位（101 vs 129）、分数滚动动画中途帧的中间值——**期望必须按组件代码+数据文件精确重算，模型经常是对的**
+- 定位：judge 环节的快速预检 + 漏报仲裁器；fail/warn 帧仍由主会话 Read 实帧仲裁，agent judge 交叉复核照旧（本工具不豁免人工 judge 关卡，只缩小其工作量）
+- 吞吐 ~9s/帧（3060 4B Q4 + seen 全枚举），55 帧 ≈ 9 分钟，无需 token 成本
+
+## batch10 统一管线（2026-09-14 定稿，新片优先走这条）- 数据驱动：`public/audio/gen_batch10.py` 一次生成 TTS+词级锚点+字幕 → `src/batch10/<topic>Data.ts`（SENT=真实句起始帧、SUBS、WORDS、DUR），组件只 import 数据，不硬编码帧号
 - 组件套件：`src/batch10/kit.tsx`（HardPage 硬切页/PopAt 词锚弹入/STATIC/SubtitleBar 安全区/EndingCard 含 CTA 安全区/BrandCorner/wordAt）
 - 页边界直接用 SENT（真实帧），**禁用 SENT_DUR 累加当页边界**（它不含句间 gap，累计漂移到最后一页早切约 1.4s）
 - 生产编队：脚本主会话亲写 → TTS/数据批量生成 → 代码agent只写码不渲染（tsc 0 报错交付）→ 主会话统一注册 Root → 依次渲染+预检 → judge 逐帧 → 集中修复。PingOpenFail 用此管线**首渲即过 judge 全帧 38/38**，验证有效

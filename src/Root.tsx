@@ -64,6 +64,8 @@ import {DUR as RangeResumeDUR} from "./batch10/rangeresumeData";
 import {DUR as PingOpenDUR} from "./batch10/pingopenData";
 import {BiSheTopicFlat} from "./BiSheTopicFlat";
 import {DUR as BiSheTopicDUR} from "./batch10/bisheData";
+import {BiSheKaitiFlat} from "./BiSheKaitiFlat";
+import {DUR as BiSheKaitiDUR} from "./batch10/kaitiData";
 
 export const RemotionRoot = () => {
   return (
@@ -416,6 +418,14 @@ export const RemotionRoot = () => {
         id="BiSheTopicFlat"
         component={BiSheTopicFlat}
         durationInFrames={BiSheTopicDUR}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="BiSheKaitiFlat"
+        component={BiSheKaitiFlat}
+        durationInFrames={BiSheKaitiDUR}
         fps={30}
         width={1920}
         height={1080}
