@@ -66,6 +66,7 @@ import {BiSheTopicFlat} from "./BiSheTopicFlat";
 import {DUR as BiSheTopicDUR} from "./batch10/bisheData";
 import {BiSheKaitiFlat} from "./BiSheKaitiFlat";
 import {DUR as BiSheKaitiDUR} from "./batch10/kaitiData";
+import {BiSheVerticalPilot, V_DUR} from "./BiSheVerticalPilot";
 
 export const RemotionRoot = () => {
   return (
@@ -429,6 +430,14 @@ export const RemotionRoot = () => {
         fps={30}
         width={1920}
         height={1080}
+      />
+      <Composition
+        id="BiSheVerticalPilot"
+        component={BiSheVerticalPilot}
+        durationInFrames={V_DUR}
+        fps={30}
+        width={1080}
+        height={1920}
       />
       <Composition
         id="ZCodeUploadDark"
