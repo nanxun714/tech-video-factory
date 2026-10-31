@@ -57,7 +57,7 @@ const VSparkle: React.FC<{x: number; y: number; s?: number; color?: string; phas
 };
 
 const VSub: React.FC<{text: string}> = ({text}) => (
-  <div style={{position: "absolute", bottom: 320, left: 40, right: 40, display: "flex", justifyContent: "center"}}>
+  <div style={{position: "absolute", bottom: 250, left: 40, right: 40, display: "flex", justifyContent: "center"}}>
     <div style={{
       fontFamily: F, fontSize: 54, fontWeight: 900, color: "#f2f5f8",
       background: "rgba(20,32,44,0.82)", borderRadius: 12, padding: "12px 30px", whiteSpace: "nowrap",
@@ -69,10 +69,10 @@ const VSub: React.FC<{text: string}> = ({text}) => (
 const PHook: React.FC = () => {
   return (
     <AbsoluteFill>
-      <div style={{position: "absolute", left: 60, top: 190, width: 380}}>
+      <div style={{position: "absolute", left: 60, top: 130, width: 380}}>
         <div style={{width: 340, height: 50, borderRadius: 999, border: `3px solid ${ORANGE}`, color: ORANGE, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 26, fontWeight: 900, letterSpacing: 3, backgroundColor: "rgba(255,255,255,0.8)", whiteSpace: "nowrap"}}>毕设通关 · 第 02 期</div>
       </div>
-      <div style={{position: "absolute", top: 280, left: 0, width: W, textAlign: "center", fontFamily: F, fontWeight: 900, fontSize: 82, lineHeight: 1.35, letterSpacing: 3}}>
+      <div style={{position: "absolute", top: 215, left: 0, width: W, textAlign: "center", fontFamily: F, fontWeight: 900, fontSize: 80, lineHeight: 1.35, letterSpacing: 3}}>
         <div style={{color: INK}}>开题报告被打回，</div>
         <div>是因为<span style={{color: RED}}>写得差</span>？</div>
         <svg width={430} height={16} style={{position: "relative", left: "50%", transform: "translateX(-50%)", top: -6, overflow: "visible"}}>
@@ -81,22 +81,22 @@ const PHook: React.FC = () => {
       </div>
 
       {/* 文档卡（第0帧在场） */}
-      <div style={{position: "absolute", left: 110, top: 660, transform: "rotate(-3deg)"}}>
-        <div style={{width: 860, height: 380, backgroundColor: "#fff", border: `3px solid ${BORDER}`, borderRadius: 22, boxShadow: "0 14px 30px rgba(47,58,69,0.12)", padding: "26px 40px", position: "relative"}}>
+      <div style={{position: "absolute", left: 110, top: 545, transform: "rotate(-3deg)"}}>
+        <div style={{width: 860, height: 390, backgroundColor: "#fff", border: `3px solid ${BORDER}`, borderRadius: 22, boxShadow: "0 14px 30px rgba(47,58,69,0.12)", padding: "28px 40px", position: "relative"}}>
           <div style={{fontFamily: F, fontSize: 40, fontWeight: 900, color: INK, borderBottom: `3px solid ${BORDER}`, paddingBottom: 12}}>开题报告</div>
-          <div style={{marginTop: 24}}>
+          <div style={{marginTop: 26}}>
             <div style={{width: 680, height: 16, borderRadius: 8, backgroundColor: "#e6ebf1", marginBottom: 18}}/>
             <div style={{width: 600, height: 16, borderRadius: 8, backgroundColor: "#e6ebf1", marginBottom: 18}}/>
             <div style={{width: 640, height: 16, borderRadius: 8, backgroundColor: "#e6ebf1"}}/>
           </div>
-          <div style={{position: "absolute", left: 40, bottom: 24, fontFamily: F, fontSize: 32, fontWeight: 900, color: SUBC, whiteSpace: "nowrap"}}>基于SSM的幼儿园管理系统</div>
+          <div style={{position: "absolute", left: 40, bottom: 26, fontFamily: F, fontSize: 32, fontWeight: 900, color: SUBC, whiteSpace: "nowrap"}}>基于SSM的幼儿园管理系统</div>
         </div>
       </div>
-      <VStamp x={520} y={780} text="撞 题" s={1.05} rot={-10} born={45} />
-      <PopAt f={45}><VSparkle x={480} y={700} s={1.0} /></PopAt>
-      <PopAt f={51}><VSparkle x={760} y={980} s={0.8} color="#f2d9a8" phase={1} /></PopAt>
+      <VStamp x={520} y={690} text="撞 题" s={1.05} rot={-10} born={45} />
+      <PopAt f={45}><VSparkle x={480} y={610} s={1.0} /></PopAt>
+      <PopAt f={51}><VSparkle x={770} y={880} s={0.8} color="#f2d9a8" phase={1} /></PopAt>
 
-      {/* 三胶囊 */}
+      {/* 三胶囊 + 小结行 */}
       {[
         {t: "2023 届 · 已用", f: 75, x: 40},
         {t: "2024 届 · 已用", f: 87, x: 380},
@@ -104,7 +104,7 @@ const PHook: React.FC = () => {
       ].map((c, i) => (
         <PopAt key={i} f={c.f}>
           <div style={{
-            position: "absolute", left: c.x, top: 1180, width: 320, height: 78,
+            position: "absolute", left: c.x, top: 1080, width: 320, height: 78,
             borderRadius: 999, backgroundColor: "#fff", border: `3px solid ${RED}`,
             display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
           }}>
@@ -113,12 +113,17 @@ const PHook: React.FC = () => {
           </div>
         </PopAt>
       ))}
+      <PopAt f={110}>
+        <div style={{position: "absolute", left: 0, top: 1230, width: W, textAlign: "center", fontFamily: F, fontSize: 34, fontWeight: 900, color: SUBC, whiteSpace: "nowrap"}}>
+          你的题目，老师手里有一张<span style={{color: RED}}>近三届清单</span>
+        </div>
+      </PopAt>
       <VSub text="开题报告被打回" />
     </AbsoluteFill>
   );
 };
 
-// ---------- 页2：对比 + 真实截图 ----------
+// ---------- 页2：对比 + 真实截图（裁局部放大：源2560×1440，裁 x30~1360 / y90~1200 的"老人卡+服务动态"区） ----------
 const PVs: React.FC = () => {
   const frame = useCurrentFrame();
   const f = frame - 110; // 页内局部帧（HardPage 非 Sequence，useCurrentFrame 是全局帧，页起点 110）
@@ -126,40 +131,40 @@ const PVs: React.FC = () => {
   const scaleB = f >= 80 ? 1.02 : 1;
   return (
     <AbsoluteFill>
-      <div style={{position: "absolute", top: 210, left: 0, width: W, textAlign: "center", fontFamily: F, fontWeight: 900, fontSize: 62, color: INK, whiteSpace: "nowrap"}}>
+      <div style={{position: "absolute", top: 110, left: 0, width: W, textAlign: "center", fontFamily: F, fontWeight: 900, fontSize: 60, color: INK, whiteSpace: "nowrap"}}>
         同样是养老管理系统，<span style={{color: ORANGE}}>差在哪？</span>
       </div>
 
-      {/* 普通方向卡 */}
+      {/* 普通方向卡（压缩高度） */}
       <PopAt f={8}>
-        <div style={{position: "absolute", left: 70, top: 340, width: 940, height: 290, backgroundColor: RED_BG, border: `3px solid ${RED}`, borderRadius: 22}}>
+        <div style={{position: "absolute", left: 70, top: 225, width: 940, height: 225, backgroundColor: RED_BG, border: `3px solid ${RED}`, borderRadius: 22}}>
           <div style={{position: "absolute", left: 330, top: -26, width: 280, height: 52, borderRadius: 999, backgroundColor: RED, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 28, fontWeight: 900}}>普通方向</div>
-          <div style={{position: "absolute", left: 0, top: 70, width: 940, textAlign: "center", fontFamily: F, fontSize: 44, fontWeight: 900, color: INK}}>养老信息管理系统</div>
-          <div style={{position: "absolute", left: 90, top: 160, width: 760, textAlign: "center", fontFamily: F, fontSize: 30, fontWeight: 800, color: SUBC, whiteSpace: "nowrap"}}>老人表 · 增删改查 · 一套 CRUD 走到底</div>
-          <div style={{position: "absolute", right: 46, bottom: 28, fontFamily: F, fontSize: 34, fontWeight: 900, color: RED}}>撞题高发区</div>
+          <div style={{position: "absolute", left: 0, top: 52, width: 940, textAlign: "center", fontFamily: F, fontSize: 42, fontWeight: 900, color: INK}}>养老信息管理系统</div>
+          <div style={{position: "absolute", left: 90, top: 128, width: 760, textAlign: "center", fontFamily: F, fontSize: 29, fontWeight: 800, color: SUBC, whiteSpace: "nowrap"}}>老人表 · 增删改查 · 一套 CRUD 走到底</div>
+          <div style={{position: "absolute", right: 40, bottom: 18, fontFamily: F, fontSize: 30, fontWeight: 900, color: RED}}>撞题高发区</div>
         </div>
       </PopAt>
 
-      {/* 细化方向卡（含真实截图） */}
-      <div style={{position: "absolute", left: 70, top: 700, width: 940, height: 660, transform: `scale(${scaleB})`, transformOrigin: "center center"}}>
-        {f >= 80 && <div style={{position: "absolute", left: -7, top: -7, width: 954, height: 674, border: `6px solid ${GREEN}`, borderRadius: 26, boxShadow: "0 0 0 8px rgba(63,174,122,0.15)", opacity: glow}} />}
+      {/* 细化方向卡（放大版真实截图：源 x30~1360,y90~1200 → 870×726，清晰度 0.65×源） */}
+      <div style={{position: "absolute", left: 70, top: 520, width: 940, height: 1040, transform: `scale(${scaleB})`, transformOrigin: "center center"}}>
+        {f >= 80 && <div style={{position: "absolute", left: -7, top: -7, width: 954, height: 1054, border: `6px solid ${GREEN}`, borderRadius: 26, boxShadow: "0 0 0 8px rgba(63,174,122,0.15)", opacity: glow}} />}
         <div style={{position: "absolute", left: 250, top: -26, width: 440, height: 52, borderRadius: 999, backgroundColor: GREEN, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 28, fontWeight: 900, whiteSpace: "nowrap", zIndex: 2}}>细化方向 · 社区养老服务平台</div>
-        <div style={{position: "absolute", left: 0, top: 0, width: 940, height: 660, backgroundColor: GREEN_BG, border: `3px solid ${GREEN}`, borderRadius: 22, overflow: "hidden"}}>
-          <div style={{position: "absolute", left: 35, top: 46, width: 870, height: 420, borderRadius: 14, overflow: "hidden", border: `2px solid ${BORDER}`, backgroundColor: "#fff"}}>
-            <Img src={staticFile("images/pilot_family_home.png")} style={{width: 870, objectFit: "cover", objectPosition: "top"}} />
+        <div style={{position: "absolute", left: 0, top: 0, width: 940, height: 1040, backgroundColor: GREEN_BG, border: `3px solid ${GREEN}`, borderRadius: 22, overflow: "hidden"}}>
+          <div style={{position: "absolute", left: 35, top: 40, width: 870, height: 726, borderRadius: 14, overflow: "hidden", border: `2px solid ${BORDER}`, backgroundColor: "#fff"}}>
+            <Img src={staticFile("images/pilot_family_home_crop.png")} style={{width: 870, display: "block"}} />
           </div>
-          <div style={{position: "absolute", left: 35, top: 490, width: 870, display: "flex", gap: 14, justifyContent: "center"}}>
+          <div style={{position: "absolute", left: 35, top: 800, width: 870, display: "flex", gap: 14, justifyContent: "center"}}>
             {["老人端", "家属端", "护理员端", "管理端"].map((r, i) => (
-              <div key={i} style={{padding: "8px 22px", borderRadius: 999, backgroundColor: "#fff", border: `2px solid ${GREEN}`, fontFamily: F, fontSize: 27, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>{r}</div>
+              <div key={i} style={{padding: "10px 26px", borderRadius: 999, backgroundColor: "#fff", border: `2px solid ${GREEN}`, fontFamily: F, fontSize: 28, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>{r}</div>
             ))}
           </div>
-          <div style={{position: "absolute", left: 0, top: 570, width: 940, textAlign: "center", fontFamily: F, fontSize: 32, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>
+          <div style={{position: "absolute", left: 0, top: 905, width: 940, textAlign: "center", fontFamily: F, fontSize: 33, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>
             陪同就医 · 康复训练 · 上门送餐 · <span style={{color: GREEN}}>精神慰藉陪伴</span>
           </div>
-          <div style={{position: "absolute", left: 34, bottom: 10, fontFamily: F, fontSize: 22, fontWeight: 700, color: SUBC}}>演示项目 · 真实界面</div>
+          <div style={{position: "absolute", left: 34, bottom: 12, fontFamily: F, fontSize: 22, fontWeight: 700, color: SUBC}}>演示项目 · 真实界面（局部放大）</div>
         </div>
       </div>
-      <PopAt f={80}><VSparkle x={880} y={640} s={1.0} /></PopAt>
+      <PopAt f={80}><VSparkle x={880} y={470} s={1.0} /></PopAt>
       <VSub text="细化：社区养老，四角色真业务" />
     </AbsoluteFill>
   );
