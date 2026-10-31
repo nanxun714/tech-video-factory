@@ -145,23 +145,26 @@ const PVs: React.FC = () => {
         </div>
       </PopAt>
 
-      {/* 细化方向卡（放大版真实截图：源 x30~1360,y90~1200 → 870×726，清晰度 0.65×源） */}
+      {/* 细化方向卡（管理端统计页：彩色图表高对比，源1300×900 → 890宽，0.68×+对比度增强） */}
       <div style={{position: "absolute", left: 70, top: 520, width: 940, height: 1040, transform: `scale(${scaleB})`, transformOrigin: "center center"}}>
         {f >= 80 && <div style={{position: "absolute", left: -7, top: -7, width: 954, height: 1054, border: `6px solid ${GREEN}`, borderRadius: 26, boxShadow: "0 0 0 8px rgba(63,174,122,0.15)", opacity: glow}} />}
         <div style={{position: "absolute", left: 250, top: -26, width: 440, height: 52, borderRadius: 999, backgroundColor: GREEN, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 28, fontWeight: 900, whiteSpace: "nowrap", zIndex: 2}}>细化方向 · 社区养老服务平台</div>
         <div style={{position: "absolute", left: 0, top: 0, width: 940, height: 1040, backgroundColor: GREEN_BG, border: `3px solid ${GREEN}`, borderRadius: 22, overflow: "hidden"}}>
-          <div style={{position: "absolute", left: 35, top: 40, width: 870, height: 726, borderRadius: 14, overflow: "hidden", border: `2px solid ${BORDER}`, backgroundColor: "#fff"}}>
-            <Img src={staticFile("images/pilot_family_home_crop.png")} style={{width: 870, display: "block"}} />
+          <div style={{position: "absolute", left: 25, top: 40, width: 890, height: 616, borderRadius: 14, overflow: "hidden", border: `2px solid ${BORDER}`, backgroundColor: "#fff"}}>
+            <Img src={staticFile("images/pilot_admin_stats.png")} style={{width: 890, display: "block", filter: "contrast(1.12) saturate(1.18)"}} />
           </div>
-          <div style={{position: "absolute", left: 35, top: 800, width: 870, display: "flex", gap: 14, justifyContent: "center"}}>
+          <div style={{position: "absolute", left: 35, top: 700, width: 870, display: "flex", gap: 14, justifyContent: "center"}}>
             {["老人端", "家属端", "护理员端", "管理端"].map((r, i) => (
               <div key={i} style={{padding: "10px 26px", borderRadius: 999, backgroundColor: "#fff", border: `2px solid ${GREEN}`, fontFamily: F, fontSize: 28, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>{r}</div>
             ))}
           </div>
-          <div style={{position: "absolute", left: 0, top: 905, width: 940, textAlign: "center", fontFamily: F, fontSize: 33, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>
+          <div style={{position: "absolute", left: 0, top: 810, width: 940, textAlign: "center", fontFamily: F, fontSize: 33, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>
             陪同就医 · 康复训练 · 上门送餐 · <span style={{color: GREEN}}>精神慰藉陪伴</span>
           </div>
-          <div style={{position: "absolute", left: 34, bottom: 12, fontFamily: F, fontSize: 22, fontWeight: 700, color: SUBC}}>演示项目 · 真实界面（局部放大）</div>
+          <div style={{position: "absolute", left: 0, top: 890, width: 940, textAlign: "center", fontFamily: F, fontSize: 30, fontWeight: 900, color: GREEN, whiteSpace: "nowrap"}}>
+            数据看板 · 调度工单 · 一眼全是真业务
+          </div>
+          <div style={{position: "absolute", left: 34, bottom: 12, fontFamily: F, fontSize: 22, fontWeight: 700, color: SUBC}}>演示项目 · 真实界面</div>
         </div>
       </div>
       <PopAt f={80}><VSparkle x={880} y={470} s={1.0} /></PopAt>
@@ -176,6 +179,6 @@ export const BiSheVerticalPilot: React.FC = () => (
   <AbsoluteFill style={{background: "linear-gradient(180deg,#ffffff 0%,#f3f6f9 100%)", fontFamily: F, overflow: "hidden"}}>
     <HardPage from={0} duration={110}><PHook /></HardPage>
     <HardPage from={110} duration={130}><PVs /></HardPage>
-    <div style={{position: "absolute", right: 36, bottom: 380, fontFamily: F, fontSize: 26, fontWeight: 800, color: SUBC, border: `2px solid ${SUBC}`, borderRadius: 24, padding: "6px 20px", whiteSpace: "nowrap"}}>全栈小秋</div>
+    <div style={{position: "absolute", right: 40, top: 30, fontFamily: F, fontSize: 27, fontWeight: 800, color: INK, border: `2.5px solid ${INK}`, borderRadius: 26, padding: "7px 24px", whiteSpace: "nowrap", backgroundColor: "rgba(255,255,255,0.75)"}}>全栈小秋</div>
   </AbsoluteFill>
 );
