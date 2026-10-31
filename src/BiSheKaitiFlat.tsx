@@ -175,59 +175,54 @@ const BookIcon: React.FC<{x: number; y: number; s?: number; c?: string}> = ({x, 
   </svg>
 );
 
-// 开题报告文档卡（P1 主体：两张同款卡相撞=撞车意象）
-const KaitiDoc: React.FC<{x: number; y: number; rot: number; born?: number}> = ({x, y, rot, born = -99}) => {
+// 开题报告文档卡（P1 主体：左右对称两张同款卡，相撞后回弹到两侧，不叠不压字）
+const KaitiDoc: React.FC<{x: number; y: number; rot: number; born?: number; opacity?: number}> = ({
+  x, y, rot, born = -99, opacity = 1,
+}) => {
   const frame = useCurrentFrame();
   const shake = born >= 0 && frame >= born
-    ? Math.sin((frame - born) / 1.8) * Math.max(0, 1 - (frame - born) / 12) * 7
+    ? Math.sin((frame - born) / 2.2) * Math.max(0, 1 - (frame - born) / 10) * 4
     : 0;
   return (
-    <div style={{position: "absolute", left: x + shake, top: y, transform: `rotate(${rot}deg)`}}>
-      <div style={{width: 430, height: 280, backgroundColor: "#fff", border: `3px solid ${BORDER}`, borderRadius: 18, boxShadow: "0 12px 28px rgba(47,58,69,0.12)", padding: "18px 30px", position: "relative"}}>
-        <div style={{fontFamily: F, fontSize: 32, fontWeight: 900, color: INK, borderBottom: `3px solid ${BORDER}`, paddingBottom: 8, whiteSpace: "nowrap"}}>开题报告</div>
-        <div style={{marginTop: 16}}>
-          <div style={{width: 340, height: 12, borderRadius: 6, backgroundColor: "#e6ebf1", marginBottom: 12}}/>
-          <div style={{width: 300, height: 12, borderRadius: 6, backgroundColor: "#e6ebf1", marginBottom: 12}}/>
-          <div style={{width: 320, height: 12, borderRadius: 6, backgroundColor: "#e6ebf1"}}/>
+    <div style={{position: "absolute", left: x + shake, top: y, transform: `rotate(${rot}deg)`, opacity}}>
+      <div style={{width: 520, height: 310, backgroundColor: "#fff", border: `3px solid ${BORDER}`, borderRadius: 20, boxShadow: "0 12px 28px rgba(47,58,69,0.12)", padding: "22px 34px", position: "relative"}}>
+        <div style={{fontFamily: F, fontSize: 38, fontWeight: 900, color: INK, borderBottom: `3px solid ${BORDER}`, paddingBottom: 10, whiteSpace: "nowrap"}}>开题报告</div>
+        <div style={{marginTop: 20}}>
+          <div style={{width: 420, height: 14, borderRadius: 7, backgroundColor: "#e6ebf1", marginBottom: 14}}/>
+          <div style={{width: 370, height: 14, borderRadius: 7, backgroundColor: "#e6ebf1", marginBottom: 14}}/>
+          <div style={{width: 395, height: 14, borderRadius: 7, backgroundColor: "#e6ebf1"}}/>
         </div>
-        <div style={{position: "absolute", left: 24, bottom: 16, fontFamily: F, fontSize: 26, fontWeight: 900, color: SUBC, whiteSpace: "nowrap"}}>基于SSM的幼儿园管理系统</div>
+        <div style={{position: "absolute", left: 34, bottom: 20, fontFamily: F, fontSize: 30, fontWeight: 900, color: SUBC, whiteSpace: "nowrap"}}>基于SSM的幼儿园管理系统</div>
       </div>
     </div>
   );
 };
 
-// ============ P1 钩子（三拍递进：文档打回 → 双卡相撞 → 前三届排重） ============
+// ============ P1 钩子（三拍递进：文档在场 → 同款卡飞入相撞 → 前三届排重；对称不叠，章落空档） ============
 const PageHook: React.FC = () => {
   const frame = useCurrentFrame();
-  const tZhu = at(0, 0.5);
   const tFly = at(1, 0.35);
   const tHit = at(1, 0.62);
-  const x2 = interpolate(frame, [tFly, tHit], [1560, 1010], clamp);
+  const x2 = interpolate(frame, [tFly, tHit], [2100, 1160], clamp);
   return (
     <AbsoluteFill>
       <div style={{position: "absolute", left: 64, top: 40, width: 344}}>
         <div style={{width: 344, height: 52, borderRadius: 999, border: `3px solid ${ORANGE}`, color: ORANGE, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 26, fontWeight: 900, letterSpacing: 3, backgroundColor: "rgba(255,255,255,0.75)", whiteSpace: "nowrap"}}>毕设通关 · 第 02 期</div>
       </div>
-      <BigTitle parts={[{t: "开题报告被打回，是因为", c: INK}, {t: "写得差", c: RED}, {t: "？", c: INK}]} y={140} size={72} />
-      <div style={{position: "absolute", right: 60, top: 300, fontFamily: F, fontSize: 220, fontWeight: 900, color: "#e7edf4", width: 240, textAlign: "center", opacity: pulse(frame, 18, 0.3, 0.7)}}>?</div>
+      <BigTitle parts={[{t: "开题报告被打回，是因为", c: INK}, {t: "写得差", c: RED}, {t: "？", c: INK}]} y={130} size={72} />
 
-      {/* 第一拍：文档被批注重写（第0帧在场） */}
-      <KaitiDoc x={430} y={340} rot={-5} born={tHit} />
-      <PopAt f={tZhu}>
-        <Stamp x={490} y={555} text="重写" s={0.62} rot={-18} born={tZhu} />
-      </PopAt>
+      {/* 第一拍：左卡第0帧在场 */}
+      <KaitiDoc x={240} y={330} rot={-4} born={tHit} />
 
-      {/* 第二拍：同款文档飞入相撞（题目撞车） */}
+      {/* 第二拍：同款卡从右飞入，撞后回弹停在对侧，章落中间空档 */}
       {frame >= tFly && (
-        <div style={{position: "absolute", left: x2, top: 372, transform: "rotate(6deg)", opacity: interpolate(frame, [tFly, tFly + 4], [0, 1], clamp)}}>
-          <KaitiDoc x={0} y={0} rot={0} born={tHit} />
-        </div>
+        <KaitiDoc x={x2} y={330} rot={4} born={tHit}
+          opacity={interpolate(frame, [tFly, tFly + 4], [0, 1], clamp)} />
       )}
       <PopAt f={tHit}>
-        <Stamp x={855} y={395} text="撞 题" s={1.15} rot={-12} born={tHit} />
+        <Stamp x={838} y={408} text="撞 题" s={1.1} rot={-10} born={tHit} />
       </PopAt>
-      <PopAt f={tHit}><Sparkle x={820} y={320} s={0.9} phase={0} /></PopAt>
-      <PopAt f={tHit + 6}><Sparkle x={1230} y={560} s={0.75} color="#f2d9a8" phase={1} /></PopAt>
+      <PopAt f={tHit}><Sparkle x={925} y={300} s={0.85} phase={0} /></PopAt>
 
       {/* 第三拍：近三届排重（逐个弹入） */}
       {[
@@ -246,10 +241,7 @@ const PageHook: React.FC = () => {
           </div>
         </PopAt>
       ))}
-      <PopAt f={at(2, 0.9)}>
-        <Label x={0} y={722} w={W} text="你的题目，老师手里有一张近三届清单" color={SUBC} size={30} />
-      </PopAt>
-      <Sparkle x={300} y={300} s={0.7} phase={2} />
+      <Sparkle x={1740} y={680} s={0.6} color="#f2d9a8" phase={2} />
     </AbsoluteFill>
   );
 };
@@ -550,7 +542,6 @@ const PAGES: {C: React.FC; from: number; dur: number}[] = [
 
 const SFX: {f: number; w: string; v: number}[] = [
   ...[0, 3, 7, 9, 10, 12, 14, 16, 18].map((i) => ({f: SENT[i], w: "whoosh.wav", v: 0.2})),
-  {f: at(0, 0.5), w: "error.wav", v: 0.22},
   {f: at(1, 0.35), w: "whoosh.wav", v: 0.2},
   {f: at(1, 0.62), w: "error.wav", v: 0.26},
   {f: at(2, 0.35), w: "pop.wav", v: 0.22},
