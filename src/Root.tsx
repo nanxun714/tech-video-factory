@@ -1,5 +1,6 @@
 import "./index.css";
 import {Composition} from "remotion";
+import {FitnessDemo, FITNESS_DEMO_DUR} from "./FitnessDemo";
 import {LinuxHadoopTutorial} from "./LinuxHadoopTutorial";
 import {tutorialDurationInFrames} from "./linuxHadoopTutorialData";
 import {TopUsMarketCapRace} from "./TopUsMarketCapRace";
@@ -451,6 +452,14 @@ export const RemotionRoot = () => {
         id="ZCodeUploadShort"
         component={ZCodeUploadShort}
         durationInFrames={ZCodeUploadShortDUR}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="FitnessDemo"
+        component={FitnessDemo}
+        durationInFrames={FITNESS_DEMO_DUR}
         fps={30}
         width={1920}
         height={1080}

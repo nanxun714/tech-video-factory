@@ -192,7 +192,7 @@ const KaitiDoc: React.FC<{x: number; y: number; rot: number; born?: number; opac
           <div style={{width: 370, height: 14, borderRadius: 7, backgroundColor: "#e6ebf1", marginBottom: 14}}/>
           <div style={{width: 395, height: 14, borderRadius: 7, backgroundColor: "#e6ebf1"}}/>
         </div>
-        <div style={{position: "absolute", left: 34, bottom: 20, fontFamily: F, fontSize: 30, fontWeight: 900, color: SUBC, whiteSpace: "nowrap"}}>基于SSM的幼儿园管理系统</div>
+        <div style={{position: "absolute", left: 34, bottom: 20, fontFamily: F, fontSize: 30, fontWeight: 900, color: SUBC, whiteSpace: "nowrap"}}>基于SpringBoot的养老信息管理系统</div>
       </div>
     </div>
   );
@@ -263,7 +263,7 @@ const PageVs: React.FC = () => {
           {frame >= SENT[4] && <div style={{position: "absolute", left: -7, top: -7, width: 834, height: 434, border: `6px solid ${RED}`, borderRadius: 28, boxShadow: `0 0 0 6px rgba(224,86,86,0.15)`, opacity: glowL}} />}
           <FlatCard x={0} y={0} w={820} h={420} chip="改前" chipColor={RED} fill={RED_BG}>
             <div style={{position: "absolute", left: 0, top: 120, width: 820, textAlign: "center"}}>
-              <div style={{fontFamily: F, fontSize: 48, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>基于<span style={{color: BLUE}}>SSM</span>的幼儿园管理系统</div>
+              <div style={{fontFamily: F, fontSize: 48, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>基于<span style={{color: BLUE}}>SpringBoot</span>的养老信息管理系统</div>
             </div>
             <div style={{position: "absolute", left: 210, top: 280, width: 400, height: 74, borderRadius: 999, backgroundColor: "#fff", border: `3px solid ${RED}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 34, fontWeight: 900, color: RED}}>
               一查一大把
@@ -276,7 +276,7 @@ const PageVs: React.FC = () => {
           {frame >= SENT[5] && <div style={{position: "absolute", left: -7, top: -7, width: 834, height: 434, border: `6px solid ${GREEN}`, borderRadius: 28, boxShadow: `0 0 0 6px rgba(63,174,122,0.15)`, opacity: glowR}} />}
           <FlatCard x={0} y={0} w={820} h={420} chip="改后" chipColor={GREEN} fill={GREEN_BG}>
             <div style={{position: "absolute", left: 0, top: 120, width: 820, textAlign: "center"}}>
-              <div style={{fontFamily: F, fontSize: 42, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>基于<span style={{color: BLUE}}>SSM</span>的「<span style={{color: ORANGE}}>智慧蓝天</span>」幼儿园管理系统</div>
+              <div style={{fontFamily: F, fontSize: 38, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>基于<span style={{color: BLUE}}>SpringBoot</span>的「<span style={{color: ORANGE}}>安颐</span>」社区养老信息管理系统</div>
             </div>
             <div style={{position: "absolute", left: 210, top: 280, width: 400, height: 74, borderRadius: 999, backgroundColor: "#fff", border: `3px solid ${GREEN}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 34, fontWeight: 900, color: GREEN}}>
               全院独一份
@@ -412,7 +412,7 @@ const PageTech: React.FC = () => (
 
     <PopAt f={at(12, 0.3) - 4}>
       <FlatCard x={230} y={320} w={700} h={330} chip="Java 方向" chipColor={BLUE} fill={BLUE_BG}>
-        <div style={{position: "absolute", left: 0, top: 90, width: 700, textAlign: "center", fontFamily: MONO, fontSize: 40, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>SpringBoot · SSM · MySQL</div>
+        <div style={{position: "absolute", left: 0, top: 90, width: 700, textAlign: "center", fontFamily: MONO, fontSize: 40, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>SpringBoot · Vue3 · MySQL</div>
         <div style={{position: "absolute", left: 0, top: 190, width: 700, textAlign: "center", fontFamily: F, fontSize: 30, fontWeight: 800, color: SUBC}}>管理系统 · 网站类项目主力</div>
       </FlatCard>
     </PopAt>
