@@ -175,24 +175,81 @@ const BookIcon: React.FC<{x: number; y: number; s?: number; c?: string}> = ({x, 
   </svg>
 );
 
-// ============ P1 钩子 ============
+// 开题报告文档卡（P1 主体：两张同款卡相撞=撞车意象）
+const KaitiDoc: React.FC<{x: number; y: number; rot: number; born?: number}> = ({x, y, rot, born = -99}) => {
+  const frame = useCurrentFrame();
+  const shake = born >= 0 && frame >= born
+    ? Math.sin((frame - born) / 1.8) * Math.max(0, 1 - (frame - born) / 12) * 7
+    : 0;
+  return (
+    <div style={{position: "absolute", left: x + shake, top: y, transform: `rotate(${rot}deg)`}}>
+      <div style={{width: 430, height: 280, backgroundColor: "#fff", border: `3px solid ${BORDER}`, borderRadius: 18, boxShadow: "0 12px 28px rgba(47,58,69,0.12)", padding: "18px 30px", position: "relative"}}>
+        <div style={{fontFamily: F, fontSize: 32, fontWeight: 900, color: INK, borderBottom: `3px solid ${BORDER}`, paddingBottom: 8, whiteSpace: "nowrap"}}>开题报告</div>
+        <div style={{marginTop: 16}}>
+          <div style={{width: 340, height: 12, borderRadius: 6, backgroundColor: "#e6ebf1", marginBottom: 12}}/>
+          <div style={{width: 300, height: 12, borderRadius: 6, backgroundColor: "#e6ebf1", marginBottom: 12}}/>
+          <div style={{width: 320, height: 12, borderRadius: 6, backgroundColor: "#e6ebf1"}}/>
+        </div>
+        <div style={{position: "absolute", left: 24, bottom: 16, fontFamily: F, fontSize: 26, fontWeight: 900, color: SUBC, whiteSpace: "nowrap"}}>基于SSM的幼儿园管理系统</div>
+      </div>
+    </div>
+  );
+};
+
+// ============ P1 钩子（三拍递进：文档打回 → 双卡相撞 → 前三届排重） ============
 const PageHook: React.FC = () => {
   const frame = useCurrentFrame();
+  const tZhu = at(0, 0.5);
+  const tFly = at(1, 0.35);
+  const tHit = at(1, 0.62);
+  const x2 = interpolate(frame, [tFly, tHit], [1560, 1010], clamp);
   return (
     <AbsoluteFill>
       <div style={{position: "absolute", left: 64, top: 40, width: 344}}>
         <div style={{width: 344, height: 52, borderRadius: 999, border: `3px solid ${ORANGE}`, color: ORANGE, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: F, fontSize: 26, fontWeight: 900, letterSpacing: 3, backgroundColor: "rgba(255,255,255,0.75)", whiteSpace: "nowrap"}}>毕设通关 · 第 02 期</div>
       </div>
-      <BigTitle parts={[{t: "开题报告被打回，是因为", c: INK}, {t: "写得差", c: RED}, {t: "？", c: INK}]} y={250} size={82} />
-      <div style={{position: "absolute", right: 120, top: 340, fontFamily: F, fontSize: 300, fontWeight: 900, color: "#dbe4ee", width: 300, textAlign: "center", opacity: pulse(frame, 18, 0.35, 0.8)}}>?</div>
-      <div style={{position: "absolute", left: 90, top: 420, fontFamily: F, fontSize: 190, fontWeight: 900, color: "#e7edf4", width: 200, textAlign: "center", opacity: pulse(frame + 14, 18, 0.3, 0.75)}}>?</div>
-      <PopAt f={at(0, 0.55) - 6}>
-        <div style={{position: "absolute", left: "50%", top: 520, transform: "translateX(-50%)"}}>
-          <Stamp x={0} y={0} text="撞 题" s={1.25} rot={-12} born={at(0, 0.55) - 6} />
-        </div>
+      <BigTitle parts={[{t: "开题报告被打回，是因为", c: INK}, {t: "写得差", c: RED}, {t: "？", c: INK}]} y={140} size={72} />
+      <div style={{position: "absolute", right: 60, top: 300, fontFamily: F, fontSize: 220, fontWeight: 900, color: "#e7edf4", width: 240, textAlign: "center", opacity: pulse(frame, 18, 0.3, 0.7)}}>?</div>
+
+      {/* 第一拍：文档被批注重写（第0帧在场） */}
+      <KaitiDoc x={430} y={340} rot={-5} born={tHit} />
+      <PopAt f={tZhu}>
+        <Stamp x={490} y={555} text="重写" s={0.62} rot={-18} born={tZhu} />
       </PopAt>
-      <Sparkle x={390} y={330} s={0.8} phase={0} />
-      <Sparkle x={1490} y={580} s={0.65} color="#f2d9a8" phase={1} />
+
+      {/* 第二拍：同款文档飞入相撞（题目撞车） */}
+      {frame >= tFly && (
+        <div style={{position: "absolute", left: x2, top: 372, transform: "rotate(6deg)", opacity: interpolate(frame, [tFly, tFly + 4], [0, 1], clamp)}}>
+          <KaitiDoc x={0} y={0} rot={0} born={tHit} />
+        </div>
+      )}
+      <PopAt f={tHit}>
+        <Stamp x={855} y={395} text="撞 题" s={1.15} rot={-12} born={tHit} />
+      </PopAt>
+      <PopAt f={tHit}><Sparkle x={820} y={320} s={0.9} phase={0} /></PopAt>
+      <PopAt f={tHit + 6}><Sparkle x={1230} y={560} s={0.75} color="#f2d9a8" phase={1} /></PopAt>
+
+      {/* 第三拍：近三届排重（逐个弹入） */}
+      {[
+        {t: "2023 届 · 已用", f: at(2, 0.35), x: 330},
+        {t: "2024 届 · 已用", f: at(2, 0.55), x: 750},
+        {t: "2025 届 · 已用", f: at(2, 0.75), x: 1170},
+      ].map((c, i) => (
+        <PopAt key={i} f={c.f}>
+          <div style={{
+            position: "absolute", left: c.x, top: 790, width: 420, height: 80,
+            borderRadius: 999, backgroundColor: "#fff", border: `3px solid ${RED}`,
+            display: "flex", alignItems: "center", justifyContent: "center", gap: 12,
+          }}>
+            <span style={{fontFamily: F, fontSize: 34, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>{c.t}</span>
+            <span style={{fontFamily: F, fontSize: 34, fontWeight: 900, color: RED}}>✗</span>
+          </div>
+        </PopAt>
+      ))}
+      <PopAt f={at(2, 0.9)}>
+        <Label x={0} y={722} w={W} text="你的题目，老师手里有一张近三届清单" color={SUBC} size={30} />
+      </PopAt>
+      <Sparkle x={300} y={300} s={0.7} phase={2} />
     </AbsoluteFill>
   );
 };
@@ -493,7 +550,12 @@ const PAGES: {C: React.FC; from: number; dur: number}[] = [
 
 const SFX: {f: number; w: string; v: number}[] = [
   ...[0, 3, 7, 9, 10, 12, 14, 16, 18].map((i) => ({f: SENT[i], w: "whoosh.wav", v: 0.2})),
-  {f: at(0, 0.55) - 6, w: "error.wav", v: 0.24},
+  {f: at(0, 0.5), w: "error.wav", v: 0.22},
+  {f: at(1, 0.35), w: "whoosh.wav", v: 0.2},
+  {f: at(1, 0.62), w: "error.wav", v: 0.26},
+  {f: at(2, 0.35), w: "pop.wav", v: 0.22},
+  {f: at(2, 0.55), w: "pop.wav", v: 0.22},
+  {f: at(2, 0.75), w: "pop.wav", v: 0.22},
   {f: SENT[3] + 4, w: "pop.wav", v: 0.24},
   {f: SENT[3] + 16, w: "pop.wav", v: 0.24},
   {f: SENT[4] + 4, w: "alert.wav", v: 0.2},
