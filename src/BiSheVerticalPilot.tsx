@@ -67,7 +67,7 @@ const DocCard: React.FC<{tag?: string}> = ({tag}) => (
       <span style={{fontFamily: F, fontSize: 38, fontWeight: 900, color: INK}}>开题报告</span>
       {tag && <span style={{fontFamily: F, fontSize: 22, fontWeight: 900, color: RED, border: `2px solid ${RED}`, borderRadius: 999, padding: "4px 14px", whiteSpace: "nowrap"}}>{tag}</span>}
     </div>
-    <div style={{marginTop: 18, fontFamily: F, fontSize: 33, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>基于SSM的养老信息管理系统</div>
+    <div style={{marginTop: 18, fontFamily: F, fontSize: 33, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>基于SpringBoot的养老信息管理系统</div>
     <div style={{marginTop: 16}}>
       <div style={{width: 600, height: 16, borderRadius: 8, backgroundColor: "#e9edf1", marginBottom: 14}}/>
       <div style={{width: 520, height: 16, borderRadius: 8, backgroundColor: "#e9edf1", marginBottom: 14}}/>
