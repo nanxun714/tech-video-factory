@@ -89,13 +89,13 @@ const BrowserFrame: React.FC<{label: string; note?: string; noteColor?: string; 
 // ---------- 页1：钩子（s0~s1） ----------
 const PHook: React.FC = () => {
   const frame = useCurrentFrame();
-  const cardY = interpolate(frame, [at(0, 0.2), at(0, 0.2) + 24], [1900, 760], {
+  const cardY = interpolate(frame, [at(0, 0.2), at(0, 0.2) + 24], [1900, 820], {
     ...clamp, easing: Easing.out(Easing.back(1.1)),
   });
   const tags = [
-    {t: "看着简单", f: at(1, 0.12), x: 80, y: 880, rot: -4},
-    {t: "功能不好设计", f: at(1, 0.48), x: 560, y: 1120, rot: 3},
-    {t: "技术不知道怎么选", f: at(1, 0.78), x: 100, y: 1240, rot: -2},
+    {t: "看着简单", f: at(1, 0.12), x: 80, y: 960, rot: -4},
+    {t: "功能不好设计", f: at(1, 0.48), x: 560, y: 1180, rot: 3},
+    {t: "技术不知道怎么选", f: at(1, 0.78), x: 100, y: 1300, rot: -2},
   ];
   return (
     <AbsoluteFill>
@@ -229,6 +229,9 @@ const PVs: React.FC = () => {
 
 // ---------- 页3：先查（s6~s8，模拟搜索界面·示意） ----------
 const PSearch: React.FC = () => {
+  const frame = useCurrentFrame();
+  // s8 切入点卡点亮时，"智能派单规则研究"行同步绿描边呼应（查→切入 视线闭环）
+  const hl = frame >= at(8, 0.2) + 4;
   const results = [
     {t: "养老信息管理系统", s: "2024 届 · 往届毕设", f: at(6, 0.5)},
     {t: "社区养老服务平台改造", s: "2025 届 · 往届毕设", f: at(6, 0.62)},
@@ -247,7 +250,7 @@ const PSearch: React.FC = () => {
             </div>
             {results.map((r, i) => (
               <PopAt key={i} f={r.f}>
-                <div style={{marginTop: 22, borderRadius: 14, border: `2.5px solid ${LINE}`, backgroundColor: "#fff", padding: "18px 26px", position: "relative"}}>
+                <div style={{marginTop: 22, borderRadius: 14, border: `2.5px solid ${i === 2 && hl ? GREEN : LINE}`, backgroundColor: i === 2 && hl ? GREEN_BG : "#fff", padding: "18px 26px", position: "relative", boxSizing: "border-box"}}>
                   <div style={{fontFamily: F, fontSize: 32, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>{r.t}</div>
                   <div style={{marginTop: 8, fontFamily: F, fontSize: 24, fontWeight: 800, color: SUBC, whiteSpace: "nowrap"}}>{r.s}</div>
                 </div>
@@ -290,19 +293,19 @@ const PScope: React.FC = () => {
   const cutAt = at(10, 0.04);
   const cutScale = interpolate(frame, [cutAt, cutAt + 12], [2.2, 1], {...clamp, easing: Easing.out(Easing.cubic)});
   const cutOpacity = interpolate(frame, [cutAt, cutAt + 12], [0, 1], clamp);
-  const barGrow = interpolate(frame, [at(10, 0.4), at(10, 0.4) + 20], [0, 1], clamp);
+  const barGrow = interpolate(frame, [at(10, 0.36), at(10, 0.36) + 18], [0, 1], clamp);
   const mods = ["用户管理", "订单管理", "在线支付", "数据统计", "评价管理", "营销活动", "内容管理", "物流跟踪"];
   const segs = [
-    {t: "技能", v: 40, c: GREEN},
-    {t: "社区", v: 25, c: INK},
-    {t: "工作量", v: 20, c: SUBC},
-    {t: "历史评价", v: 15, c: "#b8c2cc"},
+    {t: "技能", v: 40, c: GREEN, tc: "#fff"},
+    {t: "社区", v: 25, c: INK, tc: "#fff"},
+    {t: "工作量", v: 20, c: SUBC, tc: "#fff"},
+    {t: "历史评价", v: 15, c: "#d6dde3", tc: INK},
   ];
   return (
     <AbsoluteFill>
       <Title>坑二：<span style={{color: RED}}>贪大求全</span></Title>
 
-      <div style={{position: "absolute", left: 60, top: 402, width: 960, opacity: gridOpacity}}>
+      <div style={{position: "absolute", left: 60, top: 470, width: 960, opacity: gridOpacity}}>
         {[0, 1].map((row) => (
           <div key={row} style={{display: "flex", gap: 16, justifyContent: "center", marginBottom: 20}}>
             {mods.slice(row * 4, row * 4 + 4).map((m, i) => {
@@ -319,12 +322,12 @@ const PScope: React.FC = () => {
         ))}
       </div>
 
-      <div style={{position: "absolute", left: 330, top: 470, opacity: cutOpacity, transform: `scale(${cutScale}) rotate(-8deg)`}}>
+      <div style={{position: "absolute", left: 330, top: 540, opacity: cutOpacity, transform: `scale(${cutScale}) rotate(-8deg)`}}>
         <div style={{border: `7px solid ${RED}`, borderRadius: 18, padding: "10px 34px", color: RED, fontFamily: F, fontSize: 64, fontWeight: 900, letterSpacing: 14, backgroundColor: "rgba(255,255,255,0.92)"}}>砍</div>
       </div>
 
       <PopAt f={at(10, 0.14)}>
-        <div style={{position: "absolute", left: 60, top: 640, width: 960, boxSizing: "border-box", borderRadius: 20, border: `3.5px solid ${GREEN}`, backgroundColor: GREEN_BG, padding: "24px 28px"}}>
+        <div style={{position: "absolute", left: 60, top: 760, width: 960, boxSizing: "border-box", borderRadius: 20, border: `3.5px solid ${GREEN}`, backgroundColor: GREEN_BG, padding: "24px 28px"}}>
           <div style={{fontFamily: F, fontSize: 26, fontWeight: 900, color: GREEN, letterSpacing: 2}}>先砍到一条核心业务链</div>
           <div style={{marginTop: 16, display: "flex", gap: 8, justifyContent: "center", alignItems: "center"}}>
             {["老人预约", "审核", "智能派单", "上门服务"].map((c, i) => (
@@ -338,7 +341,7 @@ const PScope: React.FC = () => {
       </PopAt>
 
       <PopAt f={at(10, 0.3)}>
-        <div style={{position: "absolute", left: 60, top: 920, width: 960, boxSizing: "border-box", borderRadius: 20, border: `3px solid ${LINE}`, backgroundColor: "#fff", padding: "26px 32px", boxShadow: "0 12px 28px rgba(43,52,64,0.08)"}}>
+        <div style={{position: "absolute", left: 60, top: 1000, width: 960, boxSizing: "border-box", borderRadius: 20, border: `3px solid ${LINE}`, backgroundColor: "#fff", padding: "26px 32px", boxShadow: "0 12px 28px rgba(43,52,64,0.08)"}}>
           <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
             <span style={{fontFamily: F, fontSize: 30, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>创新点 · 智能派单匹配分</span>
             <span style={{fontFamily: F, fontSize: 22, fontWeight: 800, color: SUBC, whiteSpace: "nowrap"}}>示意</span>
@@ -349,14 +352,14 @@ const PScope: React.FC = () => {
                 width: `${s.v * barGrow}%`,
                 backgroundColor: s.c,
                 display: "flex", alignItems: "center", justifyContent: "center",
-                fontFamily: F, fontSize: 24, fontWeight: 900, color: "#fff", whiteSpace: "nowrap",
+                fontFamily: F, fontSize: 24, fontWeight: 900, color: s.tc, whiteSpace: "nowrap",
               }}>{s.v}%</div>
             ))}
           </div>
           <div style={{marginTop: 18, display: "flex", justifyContent: "space-between"}}>
             {segs.map((s) => (
               <div key={s.t} style={{display: "flex", alignItems: "center", gap: 8}}>
-                <span style={{width: 16, height: 16, borderRadius: 4, backgroundColor: s.c}}/>
+                <span style={{width: 16, height: 16, borderRadius: 4, backgroundColor: s.c, border: `1.5px solid ${LINE}`, boxSizing: "border-box"}}/>
                 <span style={{fontFamily: F, fontSize: 24, fontWeight: 800, color: INK, whiteSpace: "nowrap"}}>{s.t} {s.v}%</span>
               </div>
             ))}
@@ -379,7 +382,7 @@ const PTech: React.FC = () => {
       </div>
 
       <PopAt f={at(12, 0.04)}>
-        <div style={{position: "absolute", left: 60, top: 420, width: 960, boxSizing: "border-box", borderRadius: 22, border: `3.5px solid ${GREEN}`, backgroundColor: GREEN_BG, padding: "28px 34px"}}>
+        <div style={{position: "absolute", left: 60, top: 460, width: 960, boxSizing: "border-box", borderRadius: 22, border: `3.5px solid ${GREEN}`, backgroundColor: GREEN_BG, padding: "28px 34px"}}>
           <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
             <span style={{fontFamily: F, fontSize: 34, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>做管理系统 · 网站类</span>
             <span style={{fontFamily: F, fontSize: 26, fontWeight: 900, color: "#fff", backgroundColor: GREEN, borderRadius: 999, padding: "6px 22px", whiteSpace: "nowrap"}}>够用</span>
@@ -399,7 +402,7 @@ const PTech: React.FC = () => {
       </PopAt>
 
       <PopAt f={at(13, 0.1)}>
-        <div style={{position: "absolute", left: 60, top: 780, width: 960, boxSizing: "border-box", borderRadius: 22, border: `3px solid ${LINE}`, backgroundColor: "#fff", padding: "28px 34px"}}>
+        <div style={{position: "absolute", left: 60, top: 830, width: 960, boxSizing: "border-box", borderRadius: 22, border: `3px solid ${LINE}`, backgroundColor: "#fff", padding: "28px 34px"}}>
           <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
             <span style={{fontFamily: F, fontSize: 34, fontWeight: 900, color: INK, whiteSpace: "nowrap"}}>做数据分析类</span>
             <span style={{fontFamily: F, fontSize: 26, fontWeight: 900, color: SUBC, border: `2.5px solid ${LINE}`, borderRadius: 999, padding: "6px 22px", whiteSpace: "nowrap"}}>再考虑</span>
@@ -413,13 +416,18 @@ const PTech: React.FC = () => {
       </PopAt>
 
       <PopAt f={at(13, 0.62)}>
-        <div style={{position: "absolute", left: 0, top: 1130, width: W, display: "flex", gap: 18, justifyContent: "center"}}>
+        <div style={{position: "absolute", left: 0, top: 1170, width: W, display: "flex", gap: 18, justifyContent: "center"}}>
           {["微服务", "大数据", "前后端分离全家桶"].map((t, i) => (
             <div key={t} style={{display: "flex", alignItems: "center", gap: 10, padding: "10px 22px", borderRadius: 999, backgroundColor: "#f4f6f8", border: `2px solid ${LINE}`, whiteSpace: "nowrap"}}>
               <span style={{fontFamily: F, fontSize: 26, fontWeight: 800, color: SUBC, whiteSpace: "nowrap"}}>{t}</span>
               <span style={{fontFamily: F, fontSize: 28, fontWeight: 900, color: RED}}>✗</span>
             </div>
           ))}
+        </div>
+      </PopAt>
+      <PopAt f={at(13, 0.1)}>
+        <div style={{position: "absolute", left: 0, top: 1300, width: W, textAlign: "center", fontFamily: F, fontSize: 30, fontWeight: 800, color: SUBC, whiteSpace: "nowrap"}}>
+          先跑通，再堆技术
         </div>
       </PopAt>
 
@@ -461,7 +469,7 @@ const PGolden: React.FC = () => {
         </div>
       </PopAt>
 
-      <div style={{position: "absolute", left: 60, top: 1230, width: 960, display: "flex", gap: 24, justifyContent: "center"}}>
+      <div style={{position: "absolute", left: 60, top: 1190, width: 960, display: "flex", gap: 24, justifyContent: "center"}}>
         <PopAt f={at(16, 0.12)}>
           <div style={{width: 340, height: 170, borderRadius: 22, backgroundColor: "#fff", border: `3.5px solid ${GREEN}`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", boxSizing: "border-box"}}>
             <div style={{fontFamily: F, fontSize: 64, fontWeight: 900, color: GREEN}}>1</div>
@@ -477,7 +485,7 @@ const PGolden: React.FC = () => {
       </div>
 
       <PopAt f={at(16, 0.58)}>
-        <div style={{position: "absolute", left: 0, top: 1450, width: W, display: "flex", justifyContent: "center"}}>
+        <div style={{position: "absolute", left: 0, top: 1385, width: W, display: "flex", justifyContent: "center"}}>
           <div style={{padding: "14px 44px", borderRadius: 999, backgroundColor: GREEN, color: "#fff", fontFamily: F, fontSize: 32, fontWeight: 900, whiteSpace: "nowrap"}}>评论区扣一或二，告诉我</div>
         </div>
       </PopAt>
