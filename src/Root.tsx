@@ -1,6 +1,7 @@
 import "./index.css";
 import {Composition} from "remotion";
 import {FitnessDemo, FITNESS_DEMO_DUR} from "./FitnessDemo";
+import {FitnessLive, FITNESS_LIVE_DUR} from "./FitnessLive";
 import {LinuxHadoopTutorial} from "./LinuxHadoopTutorial";
 import {tutorialDurationInFrames} from "./linuxHadoopTutorialData";
 import {TopUsMarketCapRace} from "./TopUsMarketCapRace";
@@ -68,6 +69,8 @@ import {DUR as BiSheTopicDUR} from "./batch10/bisheData";
 import {BiSheKaitiFlat} from "./BiSheKaitiFlat";
 import {DUR as BiSheKaitiDUR} from "./batch10/kaitiData";
 import {BiSheVerticalPilot, V_DUR} from "./BiSheVerticalPilot";
+import {BiSheVerticalSelect} from "./BiSheVerticalSelect";
+import {DUR as BiSheV21DUR} from "./bisheV21Data";
 
 export const RemotionRoot = () => {
   return (
@@ -441,6 +444,14 @@ export const RemotionRoot = () => {
         height={1920}
       />
       <Composition
+        id="BiSheVerticalSelect"
+        component={BiSheVerticalSelect}
+        durationInFrames={BiSheV21DUR}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+      <Composition
         id="ZCodeUploadDark"
         component={ZCodeUploadDark}
         durationInFrames={ZCodeUploadDUR}
@@ -460,6 +471,14 @@ export const RemotionRoot = () => {
         id="FitnessDemo"
         component={FitnessDemo}
         durationInFrames={FITNESS_DEMO_DUR}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="FitnessLive"
+        component={FitnessLive}
+        durationInFrames={FITNESS_LIVE_DUR}
         fps={30}
         width={1920}
         height={1080}
